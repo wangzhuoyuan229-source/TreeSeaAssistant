@@ -59,7 +59,7 @@ public struct FloorMap: Codable, Sendable, Equatable {
     }
     public func node(_ id: NodeID) -> MapNode? { nodes.first { $0.id == id } }
 }
-public struct ItemEffects: Codable, Sendable, Equatable {
+public struct ItemEffects: Codable, Sendable, Equatable, Hashable {
     public var ap: Int; public var hope: Int; public var ingots: Int
     public init(ap: Int = 0, hope: Int = 0, ingots: Int = 0) { self.ap = ap; self.hope = hope; self.ingots = ingots }
 }

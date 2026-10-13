@@ -14,8 +14,8 @@ public struct PredictionResult: Codable, Sendable, Equatable {
     public init(mapRevision: Int, ruleVersion: String) { self.mapRevision=mapRevision; self.ruleVersion=ruleVersion }
 }
 public enum MapGraph {
-    public static func distances(from: NodeID, in map: FloorMap) -> [NodeID:Int] { [:] }
+    public static func distances(from: NodeID, in map: FloorMap) -> [NodeID:Int] { bfs(from:from,in:map,control:nil) }
 }
 public enum PredictionEngine {
-    public static func localCandidates(map: FloorMap, rules: RuleCatalog) -> PredictionResult { PredictionResult(mapRevision:map.mapRevision,ruleVersion:rules.version) }
+    public static func localCandidates(map: FloorMap, rules: RuleCatalog) -> PredictionResult { local(map:map,rules:rules,control:nil) }
 }

@@ -1,0 +1,529 @@
+[
+  {
+    "floor": 1,
+    "domains": {
+      "0": [
+        "strangeShop",
+        "secretShop",
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "3": [
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "4": [
+        "dangerousPath"
+      ],
+      "5": [
+        "dangerousPath"
+      ]
+    },
+    "expected": {
+      "0": [
+        "strangeShop",
+        "secretShop",
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "3": [
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "4": [
+        "dangerousPath"
+      ],
+      "5": [
+        "dangerousPath"
+      ]
+    }
+  },
+  {
+    "floor": 2,
+    "domains": {
+      "0": [
+        "secretShop",
+        "encounter",
+        "advance",
+        "emergencyAid"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "lossGain",
+        "advance",
+        "emergencyAid"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "advance",
+        "emergencyAid"
+      ],
+      "3": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "emergencyAid",
+        "dangerousPath"
+      ],
+      "4": [
+        "secretShop",
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "5": [
+        "encounter",
+        "wish"
+      ]
+    },
+    "expected": {
+      "0": [
+        "secretShop",
+        "encounter",
+        "advance",
+        "emergencyAid"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "lossGain",
+        "advance",
+        "emergencyAid"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "advance",
+        "emergencyAid"
+      ],
+      "3": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "emergencyAid",
+        "dangerousPath"
+      ],
+      "4": [
+        "secretShop",
+        "encounter",
+        "wish",
+        "dangerousPath"
+      ],
+      "5": [
+        "encounter",
+        "wish"
+      ]
+    }
+  },
+  {
+    "floor": 3,
+    "domains": {
+      "0": [
+        "encounter",
+        "advance",
+        "narrowEncounter"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "lossGain",
+        "advance",
+        "narrowEncounter"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "advance",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "3": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "emergencyAid"
+      ],
+      "4": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "emergencyAid"
+      ],
+      "5": [
+        "strangeShop",
+        "encounter",
+        "wish",
+        "emergencyAid"
+      ]
+    },
+    "expected": {
+      "0": [
+        "encounter",
+        "advance",
+        "narrowEncounter"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "lossGain",
+        "advance",
+        "narrowEncounter"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "advance",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "3": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "emergencyAid"
+      ],
+      "4": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "emergencyAid"
+      ],
+      "5": [
+        "strangeShop",
+        "encounter",
+        "wish",
+        "emergencyAid"
+      ]
+    }
+  },
+  {
+    "floor": 4,
+    "domains": {
+      "0": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "lossGain",
+        "advance",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "lossGain",
+        "advance",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "advance",
+        "narrowEncounter"
+      ],
+      "3": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "wonderland",
+        "narrowEncounter",
+        "dangerousPath"
+      ],
+      "4": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "wonderland",
+        "narrowEncounter",
+        "dangerousPath"
+      ],
+      "5": [
+        "strangeShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "wonderland",
+        "narrowEncounter",
+        "dangerousPath"
+      ]
+    },
+    "expected": {
+      "0": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "lossGain",
+        "advance",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "lossGain",
+        "advance",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "advance",
+        "narrowEncounter"
+      ],
+      "3": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "wonderland",
+        "narrowEncounter",
+        "dangerousPath"
+      ],
+      "4": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "wonderland",
+        "narrowEncounter",
+        "dangerousPath"
+      ],
+      "5": [
+        "strangeShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "wonderland",
+        "narrowEncounter",
+        "dangerousPath"
+      ]
+    }
+  },
+  {
+    "floor": 5,
+    "domains": {
+      "0": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "narrowEncounter"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "3": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "emergencyAid"
+      ],
+      "4": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland"
+      ],
+      "5": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland"
+      ]
+    },
+    "expected": {
+      "0": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "narrowEncounter"
+      ],
+      "1": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "2": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "narrowEncounter",
+        "emergencyAid"
+      ],
+      "3": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland",
+        "emergencyAid"
+      ],
+      "4": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland"
+      ],
+      "5": [
+        "strangeShop",
+        "secretShop",
+        "safeCorner",
+        "encounter",
+        "wish",
+        "lossGain",
+        "wonderland"
+      ]
+    }
+  }
+]

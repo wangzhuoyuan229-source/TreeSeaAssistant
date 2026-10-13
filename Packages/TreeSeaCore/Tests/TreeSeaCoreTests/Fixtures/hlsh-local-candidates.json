@@ -1,0 +1,2572 @@
+[
+  {
+    "floor": 1,
+    "distance": 0,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 0,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 0,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 1,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 1,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 1,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 2,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 2,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 2,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 3,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 3,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 3,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 4,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 4,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 4,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 5,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 5,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 5,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 6,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 6,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 6,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 7,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 7,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 7,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 8,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 8,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 8,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 9,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 9,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 9,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 10,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 10,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 10,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 11,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 11,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 11,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 12,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 12,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 12,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 13,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 13,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 13,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 14,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 14,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 14,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 15,
+    "secretShopCount": 0,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 15,
+    "secretShopCount": 1,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 1,
+    "distance": 15,
+    "secretShopCount": 2,
+    "expected": [
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 0,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 0,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 0,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 1,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 1,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 1,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 2,
+    "secretShopCount": 0,
+    "expected": [
+      "secretShop",
+      "encounter",
+      "advance",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 2,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "advance",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 2,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "advance",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 3,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 3,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 3,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 4,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "advance",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 4,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "advance",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 4,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "advance",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 5,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "emergencyAid",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 5,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "emergencyAid",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 5,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "emergencyAid",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 6,
+    "secretShopCount": 0,
+    "expected": [
+      "secretShop",
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 6,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 6,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 7,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "wish"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 7,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 7,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish"
+    ]
+  },
+  {
+    "floor": 2,
+    "distance": 8,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 8,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 8,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 9,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 9,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 9,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 10,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 10,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 10,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 11,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 11,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 11,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 12,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 12,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 12,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 13,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 13,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 13,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 14,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 14,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 14,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 15,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 15,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 2,
+    "distance": 15,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 3,
+    "distance": 0,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 3,
+    "distance": 0,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 3,
+    "distance": 0,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 3,
+    "distance": 1,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 1,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 1,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 2,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "advance",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 2,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "advance",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 2,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "advance",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 3,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 3,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 3,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 4,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "advance",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 4,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "advance",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 4,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "advance",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 5,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 5,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 5,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 6,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 6,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 6,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 7,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 7,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 7,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 8,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 8,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 8,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 9,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 9,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 9,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 10,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 10,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 10,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 11,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 11,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 11,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 12,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 12,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 12,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 13,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 13,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 13,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 14,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 14,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 14,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 15,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 15,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 3,
+    "distance": 15,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter",
+      "wish",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 0,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 4,
+    "distance": 0,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 4,
+    "distance": 0,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 4,
+    "distance": 1,
+    "secretShopCount": 0,
+    "expected": [
+      "encounter"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 1,
+    "secretShopCount": 1,
+    "expected": [
+      "encounter"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 1,
+    "secretShopCount": 2,
+    "expected": [
+      "encounter"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 2,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 2,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 2,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 3,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 3,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 3,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "lossGain",
+      "advance",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 4,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "advance",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 4,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "advance",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 4,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "advance",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 5,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 5,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 5,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 6,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 6,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 6,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 7,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 7,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 7,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 8,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 8,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 8,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "wonderland",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 9,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 9,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 9,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 10,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 10,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 10,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 11,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 11,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 11,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 12,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 12,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 12,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 13,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 13,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 13,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 14,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 14,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 14,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 15,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 15,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 4,
+    "distance": 15,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "narrowEncounter",
+      "dangerousPath"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 0,
+    "secretShopCount": 0,
+    "expected": []
+  },
+  {
+    "floor": 5,
+    "distance": 0,
+    "secretShopCount": 1,
+    "expected": []
+  },
+  {
+    "floor": 5,
+    "distance": 0,
+    "secretShopCount": 2,
+    "expected": []
+  },
+  {
+    "floor": 5,
+    "distance": 1,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 1,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 1,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "encounter",
+      "wish"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 2,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 2,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 2,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "narrowEncounter"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 3,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 3,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 3,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 4,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 4,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 4,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "narrowEncounter",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 5,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 5,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 5,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland",
+      "emergencyAid"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 6,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 6,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 6,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 7,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 7,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 7,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 8,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 8,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 8,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain",
+      "wonderland"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 9,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 9,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 9,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 10,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 10,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 10,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 11,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 11,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 11,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 12,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 12,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 12,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 13,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 13,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 13,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 14,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 14,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 14,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 15,
+    "secretShopCount": 0,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 15,
+    "secretShopCount": 1,
+    "expected": [
+      "strangeShop",
+      "secretShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  },
+  {
+    "floor": 5,
+    "distance": 15,
+    "secretShopCount": 2,
+    "expected": [
+      "strangeShop",
+      "safeCorner",
+      "encounter",
+      "wish",
+      "lossGain"
+    ]
+  }
+]
