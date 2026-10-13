@@ -1,0 +1,281 @@
+{
+  "version": "maa-59bd4ce",
+  "movements": [
+    {
+      "id": "M01",
+      "sourceID": "rogue_6_scrap_M_01",
+      "name": "报废轮子",
+      "aliases": [],
+      "range": "orthogonalTwo",
+      "targetFilter": "all",
+      "apCost": 1,
+      "minimumAPToStart": 1,
+      "initialCharges": 1,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M02",
+      "sourceID": "rogue_6_scrap_M_02",
+      "name": "报废假肢",
+      "aliases": [],
+      "range": "surroundingEight",
+      "targetFilter": "all",
+      "apCost": 1,
+      "minimumAPToStart": 1,
+      "initialCharges": 1,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M03",
+      "sourceID": "rogue_6_scrap_M_03",
+      "name": "标准引擎",
+      "aliases": [],
+      "range": "surroundingEight",
+      "targetFilter": "all",
+      "apCost": 1,
+      "minimumAPToStart": 1,
+      "initialCharges": 3,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M04",
+      "sourceID": "rogue_6_scrap_M_04",
+      "name": "重弹簧",
+      "aliases": [],
+      "range": "manhattanTwo",
+      "targetFilter": "all",
+      "apCost": 0,
+      "minimumAPToStart": 1,
+      "initialCharges": 1,
+      "randomTarget": false,
+      "expiresOnFloorEnd": true,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M05",
+      "sourceID": "rogue_6_scrap_M_05",
+      "name": "气垫底座",
+      "aliases": [],
+      "range": "manhattanTwo",
+      "targetFilter": "all",
+      "apCost": 1,
+      "minimumAPToStart": 1,
+      "initialCharges": 2,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M06",
+      "sourceID": "rogue_6_scrap_M_06",
+      "name": "试作外骨骼",
+      "aliases": [],
+      "range": "orthogonalThree",
+      "targetFilter": "all",
+      "apCost": 1,
+      "minimumAPToStart": 1,
+      "initialCharges": 2,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M07",
+      "sourceID": "rogue_6_scrap_M_07",
+      "name": "小八界",
+      "aliases": [],
+      "range": "fullMap",
+      "targetFilter": "nonCombat",
+      "apCost": 0,
+      "minimumAPToStart": 1,
+      "initialCharges": 1,
+      "randomTarget": true,
+      "expiresOnFloorEnd": true,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M08",
+      "sourceID": "rogue_6_scrap_M_08",
+      "name": "一次性喷气背包",
+      "aliases": [],
+      "range": "fullMap",
+      "targetFilter": "all",
+      "apCost": 0,
+      "minimumAPToStart": 1,
+      "initialCharges": 1,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M09",
+      "sourceID": "rogue_6_scrap_M_09",
+      "name": "老妈妈的融雪",
+      "aliases": [],
+      "range": "fullMap",
+      "targetFilter": "nonCombat",
+      "apCost": 1,
+      "minimumAPToStart": 1,
+      "initialCharges": 1,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 0,
+        "hope": 2,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M10",
+      "sourceID": "rogue_6_scrap_M_10",
+      "name": "坎诺特的触须",
+      "aliases": [],
+      "range": "fullMap",
+      "targetFilter": "shop",
+      "apCost": 1,
+      "minimumAPToStart": 1,
+      "initialCharges": 2,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 4
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M11",
+      "sourceID": "rogue_6_scrap_M_11",
+      "name": "结构性原理",
+      "aliases": [],
+      "range": "fullMap",
+      "targetFilter": "all",
+      "apCost": 1,
+      "minimumAPToStart": 1,
+      "initialCharges": 3,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 0,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    },
+    {
+      "id": "M12",
+      "sourceID": "rogue_6_scrap_M_12",
+      "name": "简易遥控器",
+      "aliases": [],
+      "range": "surroundingEight",
+      "targetFilter": "all",
+      "apCost": 0,
+      "minimumAPToStart": 1,
+      "initialCharges": 1,
+      "randomTarget": false,
+      "expiresOnFloorEnd": false,
+      "effects": {
+        "ap": 3,
+        "hope": 0,
+        "ingots": 0
+      },
+      "provenance": {
+        "sourceURL": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/blob/59bd4cecf6420f963add79ee005f969a7f5d6131/src/MaaCore/Task/Roguelike/BlackFlow/BlackFlowModel.cpp",
+        "commit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+        "status": "researchReference"
+      }
+    }
+  ]
+}
