@@ -28,10 +28,13 @@ public final class SearchControl {
     let maxChecks: Int; let maxExpansions: Int; let maxLabels: Int
     public private(set) var checks = 0; public private(set) var expansions = 0; public private(set) var labels = 0
     public private(set) var budgetLimited = false
+    var phaseDeadline: UInt64?
+    var phaseLimited = false
     public var cancelled: Bool { shouldCancel() }
     public var stopped: Bool {
         if cancelled { return true }
         let t=now(); if t >= start && t-start >= duration { budgetLimited=true; return true }
+        if let phaseDeadline, t >= phaseDeadline { phaseLimited=true; return true }
         return budgetLimited
     }
     public init(milliseconds: Int = 100, maxChecks: Int = 1000, maxExpansions: Int = 20000, maxLabels: Int = 40000, shouldCancel: @escaping () -> Bool = {false}, nowNanoseconds: @escaping () -> UInt64 = Monotonic.nowNanoseconds) {
@@ -41,4 +44,6 @@ public final class SearchControl {
     func check() -> Bool { guard !stopped, checks < maxChecks else { budgetLimited=true; return false }; checks += 1; return true }
     func expand() -> Bool { guard !stopped, expansions < maxExpansions else { budgetLimited=true; return false }; expansions += 1; return true }
     func retain() -> Bool { guard !stopped, labels < maxLabels else { budgetLimited=true; return false }; labels += 1; return true }
+    func beginPhase(milliseconds: Int) { phaseDeadline=now()+UInt64(max(0,milliseconds))*1_000_000; phaseLimited=false }
+    func endPhase() { phaseDeadline=nil }
 }

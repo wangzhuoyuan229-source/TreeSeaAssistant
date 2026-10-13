@@ -21,3 +21,8 @@
 任务 3/4：核心 BFS、独立筛选、Dinic 下界流、离散配额和全局回退已实现。源函数对照 240 个局部输入及 5 个全局输入；独立小图枚举对照通过。
 任务 5：确定性动作、逐实例次数、启动门槛、一次性增益和四分之一整数评分已实现；21 个核心测试通过（task5-suite.log）。
 工具链处理：CLT 的默认 SwiftPM 构建后端间歇遗漏 TestingMacros；scripts/test-core.sh 使用 native 后端并显式提供 CLT Framework/插件路径，已复现并消除该故障，不修改系统配置。native 弃用警告保留。
+
+任务 6：安全求解、三偏好共享预算搜索、必经与规范化去重已实现；27 个核心测试通过。安全求解使用确定性前向资源支配与循环记忆化适配；仅在无加工品/无增益且正徒步成本时证明最小 AP，其他可达结果不伪造 minimumRequiredAP。
+任务 1A/7/7A/8/9：原生界面源码与 Support/Recognition 模块已建立。宿主上 17 个测试通过，包括真实 Image I/O 方向/裁剪/上限与 Core ML 运行输出；这些不等于 iOS 设备验收。71 个原版 sprite（保留偏移）、4 个背景与首次 AppIcon 已集成。
+工程：3 个 iOS-only targets、共享 scheme、本地 TreeSeaCore 依赖已生成；PBX plist 校验通过，Swift UI 源码语法解析通过。
+当前未通过/未执行：xcodebuild 无完整 Xcode 环境，iOS App 编译、iPhone/iPad UI 自动化、实战截图、真机性能及人工视觉验收。没有以宿主测试替代这些项目。

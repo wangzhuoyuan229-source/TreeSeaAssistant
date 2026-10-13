@@ -1,0 +1,48 @@
+{
+  "sourceCommit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+  "sourceSHA256": "864655b11fef3080839a86e6ef6976364924064afb439de6a83ce3288809a9aa",
+  "runtimeSHA256": "a500ec55aa9beb9afffeeeaaf9860c1b66d676acbb64eea92044818a4c66982f",
+  "coremlFiles": {
+    "Manifest.json": "405b4d0403fde1832da9f2aabd1cd01496fe4ae76dcd7cf7561d4b2cab21d5d4",
+    "Data/com.apple.CoreML/model.mlmodel": "73b62a6909279213d9226115d7bf151198460d397172697d5da51098b0333df6",
+    "Data/com.apple.CoreML/weights/weight.bin": "d33354de8f069f4dcb3cc49d116b65ac0ec366aa292573f26b3af8582777d6de"
+  },
+  "tools": {
+    "torch": "2.8.0",
+    "onnx": "1.19.1",
+    "onnxruntime": "1.19.2",
+    "coremltools": "9.0",
+    "python": "3.9.6"
+  },
+  "syntheticOutputComparison": [
+    {
+      "name": "dark",
+      "onnx": -12.03437328338623,
+      "coreml": -12.034369468688965,
+      "absoluteError": 3.814697265625e-06,
+      "decisionEqual": true
+    },
+    {
+      "name": "light",
+      "onnx": -0.15620452165603638,
+      "coreml": -0.15620440244674683,
+      "absoluteError": 1.1920928955078125e-07,
+      "decisionEqual": true
+    },
+    {
+      "name": "noise",
+      "onnx": 0.20095139741897583,
+      "coreml": 0.200951486825943,
+      "absoluteError": 8.940696716308594e-08,
+      "decisionEqual": true
+    },
+    {
+      "name": "corridor",
+      "onnx": -0.8089234232902527,
+      "coreml": -0.808923065662384,
+      "absoluteError": 3.5762786865234375e-07,
+      "decisionEqual": true
+    }
+  ],
+  "gameScreenshotValidation": "not performed"
+}
