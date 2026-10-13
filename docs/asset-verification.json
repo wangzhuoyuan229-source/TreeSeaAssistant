@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "verifiedOn": "2026-10-13",
+  "scope": "Asset files, metadata and documentation only; no App runtime tests",
+  "assets": {
+    "图标": {
+      "files": 11,
+      "png": 11,
+      "svg": 0,
+      "mappings": 76,
+      "movementPairs": 12,
+      "spriteRectangles": 71
+    },
+    "自建素材": {
+      "files": 14,
+      "png": 8,
+      "svg": 6
+    }
+  },
+  "localMarkdownLinksChecked": 207,
+  "planTaskCount": 12,
+  "allImplementationCheckboxesUnchecked": true,
+  "V2PaletteTokens": 12,
+  "errors": []
+}

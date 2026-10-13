@@ -1,0 +1,1643 @@
+{
+  "schemaVersion": 1,
+  "sourcePage": "https://www.lubiao.wiki/tools/blackstream-route",
+  "assetBaseURL": "https://assets.lubiao.wiki",
+  "assetPrefix": "lubiao-wiki/assets/20260921021806",
+  "downloadedOn": "2026-10-13",
+  "clientTimezone": "Asia/Shanghai",
+  "sourceManifestURL": "https://www.lubiao.wiki/_nuxt/DsWH-AZn.js",
+  "sourceManifestSHA256": "c3ef4ae2664477ef2afb27d6bfec626bc3d136b30eecf85d9b928e61c4280b2c",
+  "modifications": "none; downloaded PNG bytes and source sprite coordinates retained",
+  "resourceLicense": "not declared in inspected asset manifest",
+  "files": [
+    {
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/atlases/archive-012.png?response-policy=corp-v1",
+      "sha256": "1e94739ae10eaa2e2cfdb3939382b04268908ada3cd7b96b45561ab25f4dff4a",
+      "bytes": 544144,
+      "width": 652,
+      "height": 761,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/atlases/nodes.png?response-policy=corp-v1",
+      "sha256": "d401f6dc812b63a507cdc24cd903dbeb0946ce4bca4fbb1739cdfcef52901627",
+      "bytes": 1382170,
+      "width": 1962,
+      "height": 1050,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/atlases/products.png?response-policy=corp-v1",
+      "sha256": "c569356834e3a21ed33c45ff4cebd4e8b34bdbcb7af3a4458f4329268e04ef18",
+      "bytes": 450778,
+      "width": 1908,
+      "height": 374,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/atlases/ui-core.png?response-policy=corp-v1",
+      "sha256": "05641ffd077a50d304eea005e3008a529650e170d277be4a1117549f43161df1",
+      "bytes": 37480,
+      "width": 664,
+      "height": 184,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/atlases/ui-effects.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/atlases/ui-effects.png?response-policy=corp-v1",
+      "sha256": "94c1f71bb5aca6c7e066e43f58f95ce62f571347d4034c322174709d2f23c307",
+      "bytes": 88337,
+      "width": 482,
+      "height": 248,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/atlases/ui-marks.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/atlases/ui-marks.png?response-policy=corp-v1",
+      "sha256": "a88c848755697761513e50fac88c40d8fc6557b61b982976b1c3c1b53243a13d",
+      "bytes": 44308,
+      "width": 468,
+      "height": 89,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/backgrounds/area-1.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/backgrounds/area-1.png?response-policy=corp-v1",
+      "sha256": "f5e487ea96ea46a5f2a41ee5d48a7bd73bf4cd8fa8578d56ad9cb65014d894ef",
+      "bytes": 1116836,
+      "width": 1560,
+      "height": 960,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/backgrounds/area-2.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/backgrounds/area-2.png?response-policy=corp-v1",
+      "sha256": "6c1b734a7b1ddc3cc1139569d0a8b509396d216cc6400ea1d35ae841972d6289",
+      "bytes": 1108982,
+      "width": 1560,
+      "height": 960,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/backgrounds/area-3.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/backgrounds/area-3.png?response-policy=corp-v1",
+      "sha256": "3506e875422d569b4842d8da56a546448a78f3b916bbe66d27127a7969cfa0af",
+      "bytes": 1104427,
+      "width": 1560,
+      "height": 960,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/backgrounds/area-4.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/backgrounds/area-4.png?response-policy=corp-v1",
+      "sha256": "7b0f764bf33c6b4bb6bc43bc3929316593d5f3e558345600941855cedc2353d3",
+      "bytes": 1032699,
+      "width": 1560,
+      "height": 960,
+      "contentType": "image/png"
+    },
+    {
+      "file": "raw/themes/blackstream/backgrounds/area-5.png",
+      "sourceURL": "https://assets.lubiao.wiki/lubiao-wiki/assets/20260921021806/themes/blackstream/backgrounds/area-5.png?response-policy=corp-v1",
+      "sha256": "338cb9ae4037cb2d609eaa6c37de51dc43129103355a973496cd6217d039174a",
+      "bytes": 1109162,
+      "width": 1560,
+      "height": 960,
+      "contentType": "image/png"
+    }
+  ],
+  "assets": [
+    {
+      "assetKey": "themes/blackstream/nodes/combat.png",
+      "kind": "nodes",
+      "name": "作战",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 2,
+        "y": 2,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/danger-end.png",
+      "kind": "nodes",
+      "name": "险路尽头",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 264,
+        "y": 2,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/danger-enemy-cadejo.png",
+      "kind": "nodes",
+      "name": "险路恶敌·首领 I",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 2,
+        "y": 264,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/danger-enemy-shchmr.png",
+      "kind": "nodes",
+      "name": "险路恶敌·首领 III",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 526,
+        "y": 2,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/danger-enemy-shdbjg.png",
+      "kind": "nodes",
+      "name": "险路恶敌·中型 I",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 788,
+        "y": 2,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/danger-enemy-shorbb.png",
+      "kind": "nodes",
+      "name": "险路恶敌·首领 II",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1050,
+        "y": 2,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/danger-enemy-shsgzd.png",
+      "kind": "nodes",
+      "name": "险路恶敌·中型 II",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1312,
+        "y": 2,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/danger-enemy-shwksc.png",
+      "kind": "nodes",
+      "name": "险路恶敌·中型 III",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1574,
+        "y": 2,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/danger-enemy.png",
+      "kind": "nodes",
+      "name": "险路恶敌",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 2,
+        "y": 264,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/danger-path.png",
+      "kind": "nodes",
+      "name": "险路小径",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 264,
+        "y": 264,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/emergency-aid.png",
+      "kind": "nodes",
+      "name": "应急助力",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 526,
+        "y": 264,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/emergency-combat.png",
+      "kind": "nodes",
+      "name": "紧急作战",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 788,
+        "y": 264,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/encounter.png",
+      "kind": "nodes",
+      "name": "不期而遇",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1050,
+        "y": 264,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/fate-choice.png",
+      "kind": "nodes",
+      "name": "命运所指",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1312,
+        "y": 264,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/first-step.png",
+      "kind": "nodes",
+      "name": "先行一步",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1574,
+        "y": 264,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/gain-loss.png",
+      "kind": "nodes",
+      "name": "失与得",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 2,
+        "y": 526,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/ideal-source.png",
+      "kind": "nodes",
+      "name": "理想源",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 788,
+        "y": 788,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/narrow-meet.png",
+      "kind": "nodes",
+      "name": "狭路相逢",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 264,
+        "y": 526,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/overlook.png",
+      "kind": "nodes",
+      "name": "羽瞰点",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 526,
+        "y": 526,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/rogue-trader.png",
+      "kind": "nodes",
+      "name": "诡意行商",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 788,
+        "y": 526,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/safe-corner.png",
+      "kind": "nodes",
+      "name": "安全的角落",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1050,
+        "y": 526,
+        "width": 256,
+        "height": 256,
+        "sourceWidth": 256,
+        "sourceHeight": 256,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/secret-trader.png",
+      "kind": "nodes",
+      "name": "秘境行商",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1308,
+        "y": 526,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/settlement.png",
+      "kind": "nodes",
+      "name": "居民据点",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1570,
+        "y": 526,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/start.png",
+      "kind": "nodes",
+      "name": "起点",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1832,
+        "y": 526,
+        "width": 128,
+        "height": 128,
+        "sourceWidth": 128,
+        "sourceHeight": 128,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/unknown-ferocity.png",
+      "kind": "nodes",
+      "name": "未知的凶戾",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 2,
+        "y": 788,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/unknown-mystery.png",
+      "kind": "nodes",
+      "name": "未知的诡秘",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 264,
+        "y": 788,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/winding-path.png",
+      "kind": "nodes",
+      "name": "曲折密道",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 526,
+        "y": 788,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/wish.png",
+      "kind": "nodes",
+      "name": "得偿所愿",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 788,
+        "y": 788,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/nodes/wrong-turn.png",
+      "kind": "nodes",
+      "name": "误入奇境",
+      "file": "raw/themes/blackstream/atlases/nodes.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/nodes.png",
+        "atlasWidth": 1962,
+        "atlasHeight": 1050,
+        "x": 1050,
+        "y": 788,
+        "width": 260,
+        "height": 260,
+        "sourceWidth": 260,
+        "sourceHeight": 260,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/products/cannot-tentacle.png",
+      "kind": "products",
+      "name": "坎诺特的触须",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 2,
+        "y": 2,
+        "width": 155,
+        "height": 178,
+        "sourceWidth": 155,
+        "sourceHeight": 178,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M10"
+    },
+    {
+      "assetKey": "themes/blackstream/products/heavy-spring.png",
+      "kind": "products",
+      "name": "重弹簧",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 159,
+        "y": 2,
+        "width": 184,
+        "height": 184,
+        "sourceWidth": 184,
+        "sourceHeight": 184,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M04"
+    },
+    {
+      "assetKey": "themes/blackstream/products/hover-base.png",
+      "kind": "products",
+      "name": "气垫底座",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 345,
+        "y": 2,
+        "width": 169,
+        "height": 133,
+        "sourceWidth": 169,
+        "sourceHeight": 133,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M05"
+    },
+    {
+      "assetKey": "themes/blackstream/products/jetpack.png",
+      "kind": "products",
+      "name": "一次性喷气背包",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 516,
+        "y": 2,
+        "width": 128,
+        "height": 180,
+        "sourceWidth": 128,
+        "sourceHeight": 180,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M08"
+    },
+    {
+      "assetKey": "themes/blackstream/products/little-bajie.png",
+      "kind": "products",
+      "name": "小八界",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 646,
+        "y": 2,
+        "width": 184,
+        "height": 184,
+        "sourceWidth": 184,
+        "sourceHeight": 184,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M07"
+    },
+    {
+      "assetKey": "themes/blackstream/products/mama-snowmelt.png",
+      "kind": "products",
+      "name": "老妈妈的融雪",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 832,
+        "y": 2,
+        "width": 184,
+        "height": 184,
+        "sourceWidth": 184,
+        "sourceHeight": 184,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M09"
+    },
+    {
+      "assetKey": "themes/blackstream/products/prototype-exoskeleton.png",
+      "kind": "products",
+      "name": "试作外骨骼",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 1018,
+        "y": 2,
+        "width": 184,
+        "height": 184,
+        "sourceWidth": 184,
+        "sourceHeight": 184,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M06"
+    },
+    {
+      "assetKey": "themes/blackstream/products/scrap-prosthesis.png",
+      "kind": "products",
+      "name": "报废假肢",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 1204,
+        "y": 2,
+        "width": 184,
+        "height": 184,
+        "sourceWidth": 184,
+        "sourceHeight": 184,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M02"
+    },
+    {
+      "assetKey": "themes/blackstream/products/scrap-wheel.png",
+      "kind": "products",
+      "name": "报废轮子",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 1390,
+        "y": 2,
+        "width": 144,
+        "height": 153,
+        "sourceWidth": 144,
+        "sourceHeight": 153,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M01"
+    },
+    {
+      "assetKey": "themes/blackstream/products/simple-remote.png",
+      "kind": "products",
+      "name": "简易遥控器",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 1536,
+        "y": 2,
+        "width": 184,
+        "height": 184,
+        "sourceWidth": 184,
+        "sourceHeight": 184,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M12"
+    },
+    {
+      "assetKey": "themes/blackstream/products/standard-engine.png",
+      "kind": "products",
+      "name": "标准引擎",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 1722,
+        "y": 2,
+        "width": 184,
+        "height": 184,
+        "sourceWidth": 184,
+        "sourceHeight": 184,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M03"
+    },
+    {
+      "assetKey": "themes/blackstream/products/structural-principle.png",
+      "kind": "products",
+      "name": "结构性原理",
+      "file": "raw/themes/blackstream/atlases/products.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/products.png",
+        "atlasWidth": 1908,
+        "atlasHeight": 374,
+        "x": 2,
+        "y": 188,
+        "width": 184,
+        "height": 184,
+        "sourceWidth": 184,
+        "sourceHeight": 184,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "movementID": "M11"
+    },
+    {
+      "assetKey": "themes/blackstream/action/bg_action_point.png",
+      "kind": "action",
+      "name": "bg_action_point",
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-core.png",
+        "atlasWidth": 664,
+        "atlasHeight": 184,
+        "x": 2,
+        "y": 2,
+        "width": 124,
+        "height": 116,
+        "sourceWidth": 124,
+        "sourceHeight": 116,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/start/cursor_anchor.png",
+      "kind": "start",
+      "name": "cursor_anchor",
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-core.png",
+        "atlasWidth": 664,
+        "atlasHeight": 184,
+        "x": 128,
+        "y": 2,
+        "width": 180,
+        "height": 180,
+        "sourceWidth": 180,
+        "sourceHeight": 180,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/start/cursor_body_soft_shadow.png",
+      "kind": "start",
+      "name": "cursor_body_soft_shadow",
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-core.png",
+        "atlasWidth": 664,
+        "atlasHeight": 184,
+        "x": 310,
+        "y": 2,
+        "width": 68,
+        "height": 104,
+        "sourceWidth": 68,
+        "sourceHeight": 104,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/start/cursor_tip.png",
+      "kind": "start",
+      "name": "cursor_tip",
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-core.png",
+        "atlasWidth": 664,
+        "atlasHeight": 184,
+        "x": 380,
+        "y": 2,
+        "width": 76,
+        "height": 36,
+        "sourceWidth": 76,
+        "sourceHeight": 36,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/start/head.png",
+      "kind": "start",
+      "name": "head",
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-core.png",
+        "atlasWidth": 664,
+        "atlasHeight": 184,
+        "x": 458,
+        "y": 2,
+        "width": 36,
+        "height": 36,
+        "sourceWidth": 36,
+        "sourceHeight": 36,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/start/heart_star.png",
+      "kind": "start",
+      "name": "heart_star",
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-core.png",
+        "atlasWidth": 664,
+        "atlasHeight": 184,
+        "x": 496,
+        "y": 2,
+        "width": 84,
+        "height": 84,
+        "sourceWidth": 84,
+        "sourceHeight": 84,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/start/spark_inlight.png",
+      "kind": "start",
+      "name": "spark_inlight",
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-core.png",
+        "atlasWidth": 664,
+        "atlasHeight": 184,
+        "x": 582,
+        "y": 2,
+        "width": 28,
+        "height": 28,
+        "sourceWidth": 28,
+        "sourceHeight": 28,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/start/spark_solid.png",
+      "kind": "start",
+      "name": "spark_solid",
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-core.png",
+        "atlasWidth": 664,
+        "atlasHeight": 184,
+        "x": 612,
+        "y": 2,
+        "width": 28,
+        "height": 28,
+        "sourceWidth": 28,
+        "sourceHeight": 28,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/start/swile.png",
+      "kind": "start",
+      "name": "swile",
+      "file": "raw/themes/blackstream/atlases/ui-core.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-core.png",
+        "atlasWidth": 664,
+        "atlasHeight": 184,
+        "x": 642,
+        "y": 2,
+        "width": 20,
+        "height": 24,
+        "sourceWidth": 20,
+        "sourceHeight": 24,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/marks/mark-1.png",
+      "kind": "marks",
+      "name": "流窜“居民”",
+      "file": "raw/themes/blackstream/atlases/ui-marks.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-marks.png",
+        "atlasWidth": 468,
+        "atlasHeight": 89,
+        "x": 2,
+        "y": 2,
+        "width": 82,
+        "height": 82,
+        "sourceWidth": 82,
+        "sourceHeight": 82,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/marks/mark-2.png",
+      "kind": "marks",
+      "name": "线人与线索",
+      "file": "raw/themes/blackstream/atlases/ui-marks.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-marks.png",
+        "atlasWidth": 468,
+        "atlasHeight": 89,
+        "x": 86,
+        "y": 2,
+        "width": 88,
+        "height": 85,
+        "sourceWidth": 88,
+        "sourceHeight": 85,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/marks/mark-3.png",
+      "kind": "marks",
+      "name": "谜题与谜底",
+      "file": "raw/themes/blackstream/atlases/ui-marks.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-marks.png",
+        "atlasWidth": 468,
+        "atlasHeight": 89,
+        "x": 86,
+        "y": 2,
+        "width": 88,
+        "height": 85,
+        "sourceWidth": 88,
+        "sourceHeight": 85,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/marks/mark-4.png",
+      "kind": "marks",
+      "name": "光明之末",
+      "file": "raw/themes/blackstream/atlases/ui-marks.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-marks.png",
+        "atlasWidth": 468,
+        "atlasHeight": 89,
+        "x": 176,
+        "y": 2,
+        "width": 77,
+        "height": 83,
+        "sourceWidth": 77,
+        "sourceHeight": 83,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/marks/mark-5.png",
+      "kind": "marks",
+      "name": "神明之殇",
+      "file": "raw/themes/blackstream/atlases/ui-marks.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-marks.png",
+        "atlasWidth": 468,
+        "atlasHeight": 89,
+        "x": 255,
+        "y": 2,
+        "width": 55,
+        "height": 78,
+        "sourceWidth": 55,
+        "sourceHeight": 78,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/marks/mark-6.png",
+      "kind": "marks",
+      "name": "文明之烬",
+      "file": "raw/themes/blackstream/atlases/ui-marks.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-marks.png",
+        "atlasWidth": 468,
+        "atlasHeight": 89,
+        "x": 312,
+        "y": 2,
+        "width": 86,
+        "height": 76,
+        "sourceWidth": 86,
+        "sourceHeight": 76,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/marks/mark-7.png",
+      "kind": "marks",
+      "name": "藏果地",
+      "file": "raw/themes/blackstream/atlases/ui-marks.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-marks.png",
+        "atlasWidth": 468,
+        "atlasHeight": 89,
+        "x": 400,
+        "y": 2,
+        "width": 66,
+        "height": 75,
+        "sourceWidth": 66,
+        "sourceHeight": 75,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/effects/normal_node_reach_backlight.png",
+      "kind": "effects",
+      "name": "normal_node_reach_backlight",
+      "file": "raw/themes/blackstream/atlases/ui-effects.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-effects.png",
+        "atlasWidth": 482,
+        "atlasHeight": 248,
+        "x": 2,
+        "y": 2,
+        "width": 232,
+        "height": 236,
+        "sourceWidth": 232,
+        "sourceHeight": 236,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/effects/weather_eye_main.png",
+      "kind": "effects",
+      "name": "weather_eye_main",
+      "file": "raw/themes/blackstream/atlases/ui-effects.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/ui-effects.png",
+        "atlasWidth": 482,
+        "atlasHeight": 248,
+        "x": 236,
+        "y": 2,
+        "width": 244,
+        "height": 244,
+        "sourceWidth": 244,
+        "sourceHeight": 244,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_01.png",
+      "kind": "itemIllustration",
+      "name": "报废轮子",
+      "movementID": "M01",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 132,
+        "y": 162,
+        "width": 128,
+        "height": 136,
+        "sourceWidth": 128,
+        "sourceHeight": 136,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_02.png",
+      "kind": "itemIllustration",
+      "name": "报废假肢",
+      "movementID": "M02",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 262,
+        "y": 162,
+        "width": 128,
+        "height": 128,
+        "sourceWidth": 128,
+        "sourceHeight": 128,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_03.png",
+      "kind": "itemIllustration",
+      "name": "标准引擎",
+      "movementID": "M03",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 392,
+        "y": 162,
+        "width": 128,
+        "height": 128,
+        "sourceWidth": 128,
+        "sourceHeight": 128,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_04.png",
+      "kind": "itemIllustration",
+      "name": "重弹簧",
+      "movementID": "M04",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 522,
+        "y": 162,
+        "width": 128,
+        "height": 128,
+        "sourceWidth": 128,
+        "sourceHeight": 128,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_05.png",
+      "kind": "itemIllustration",
+      "name": "气垫底座",
+      "movementID": "M05",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 2,
+        "y": 300,
+        "width": 128,
+        "height": 101,
+        "sourceWidth": 128,
+        "sourceHeight": 101,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_06.png",
+      "kind": "itemIllustration",
+      "name": "试作外骨骼",
+      "movementID": "M06",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 132,
+        "y": 300,
+        "width": 128,
+        "height": 128,
+        "sourceWidth": 128,
+        "sourceHeight": 128,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_07.png",
+      "kind": "itemIllustration",
+      "name": "小八界",
+      "movementID": "M07",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 262,
+        "y": 300,
+        "width": 128,
+        "height": 128,
+        "sourceWidth": 128,
+        "sourceHeight": 128,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_08.png",
+      "kind": "itemIllustration",
+      "name": "一次性喷气背包",
+      "movementID": "M08",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 392,
+        "y": 300,
+        "width": 128,
+        "height": 180,
+        "sourceWidth": 128,
+        "sourceHeight": 180,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_09.png",
+      "kind": "itemIllustration",
+      "name": "老妈妈的融雪",
+      "movementID": "M09",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 522,
+        "y": 300,
+        "width": 128,
+        "height": 128,
+        "sourceWidth": 128,
+        "sourceHeight": 128,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_10.png",
+      "kind": "itemIllustration",
+      "name": "坎诺特的触须",
+      "movementID": "M10",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 2,
+        "y": 482,
+        "width": 128,
+        "height": 147,
+        "sourceWidth": 128,
+        "sourceHeight": 147,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_11.png",
+      "kind": "itemIllustration",
+      "name": "结构性原理",
+      "movementID": "M11",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 132,
+        "y": 482,
+        "width": 128,
+        "height": 128,
+        "sourceWidth": 128,
+        "sourceHeight": 128,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "items/rogue_6_scrap_M_12.png",
+      "kind": "itemIllustration",
+      "name": "简易遥控器",
+      "movementID": "M12",
+      "file": "raw/themes/blackstream/atlases/archive-012.png",
+      "sprite": {
+        "atlasKey": "themes/blackstream/atlases/archive-012.png",
+        "atlasWidth": 652,
+        "atlasHeight": 761,
+        "x": 262,
+        "y": 482,
+        "width": 128,
+        "height": 128,
+        "sourceWidth": 128,
+        "sourceHeight": 128,
+        "offsetX": 0,
+        "offsetY": 0
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/backgrounds/area-1.png",
+      "kind": "areaBackground",
+      "name": "Area 1",
+      "file": "raw/themes/blackstream/backgrounds/area-1.png",
+      "responsiveMetadata": {
+        "originalWidth": 1560,
+        "widths": [
+          640,
+          960,
+          1280
+        ]
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/backgrounds/area-2.png",
+      "kind": "areaBackground",
+      "name": "Area 2",
+      "file": "raw/themes/blackstream/backgrounds/area-2.png",
+      "responsiveMetadata": {
+        "originalWidth": 1560,
+        "widths": [
+          640,
+          960,
+          1280
+        ]
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/backgrounds/area-3.png",
+      "kind": "areaBackground",
+      "name": "Area 3",
+      "file": "raw/themes/blackstream/backgrounds/area-3.png",
+      "responsiveMetadata": {
+        "originalWidth": 1560,
+        "widths": [
+          640,
+          960,
+          1280
+        ]
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/backgrounds/area-4.png",
+      "kind": "areaBackground",
+      "name": "Area 4",
+      "file": "raw/themes/blackstream/backgrounds/area-4.png",
+      "responsiveMetadata": {
+        "originalWidth": 1560,
+        "widths": [
+          640,
+          960,
+          1280
+        ]
+      }
+    },
+    {
+      "assetKey": "themes/blackstream/backgrounds/area-5.png",
+      "kind": "areaBackground",
+      "name": "Area 5",
+      "file": "raw/themes/blackstream/backgrounds/area-5.png",
+      "responsiveMetadata": {
+        "originalWidth": 1560,
+        "widths": [
+          640,
+          960,
+          1280
+        ]
+      }
+    }
+  ],
+  "movementProducts": [
+    {
+      "movementID": "M01",
+      "name": "报废轮子",
+      "iconKey": "themes/blackstream/products/scrap-wheel.png",
+      "illustrationKey": "items/rogue_6_scrap_M_01.png"
+    },
+    {
+      "movementID": "M02",
+      "name": "报废假肢",
+      "iconKey": "themes/blackstream/products/scrap-prosthesis.png",
+      "illustrationKey": "items/rogue_6_scrap_M_02.png"
+    },
+    {
+      "movementID": "M03",
+      "name": "标准引擎",
+      "iconKey": "themes/blackstream/products/standard-engine.png",
+      "illustrationKey": "items/rogue_6_scrap_M_03.png"
+    },
+    {
+      "movementID": "M04",
+      "name": "重弹簧",
+      "iconKey": "themes/blackstream/products/heavy-spring.png",
+      "illustrationKey": "items/rogue_6_scrap_M_04.png"
+    },
+    {
+      "movementID": "M05",
+      "name": "气垫底座",
+      "iconKey": "themes/blackstream/products/hover-base.png",
+      "illustrationKey": "items/rogue_6_scrap_M_05.png"
+    },
+    {
+      "movementID": "M06",
+      "name": "试作外骨骼",
+      "iconKey": "themes/blackstream/products/prototype-exoskeleton.png",
+      "illustrationKey": "items/rogue_6_scrap_M_06.png"
+    },
+    {
+      "movementID": "M07",
+      "name": "小八界",
+      "iconKey": "themes/blackstream/products/little-bajie.png",
+      "illustrationKey": "items/rogue_6_scrap_M_07.png"
+    },
+    {
+      "movementID": "M08",
+      "name": "一次性喷气背包",
+      "iconKey": "themes/blackstream/products/jetpack.png",
+      "illustrationKey": "items/rogue_6_scrap_M_08.png"
+    },
+    {
+      "movementID": "M09",
+      "name": "老妈妈的融雪",
+      "iconKey": "themes/blackstream/products/mama-snowmelt.png",
+      "illustrationKey": "items/rogue_6_scrap_M_09.png"
+    },
+    {
+      "movementID": "M10",
+      "name": "坎诺特的触须",
+      "iconKey": "themes/blackstream/products/cannot-tentacle.png",
+      "illustrationKey": "items/rogue_6_scrap_M_10.png"
+    },
+    {
+      "movementID": "M11",
+      "name": "结构性原理",
+      "iconKey": "themes/blackstream/products/structural-principle.png",
+      "illustrationKey": "items/rogue_6_scrap_M_11.png"
+    },
+    {
+      "movementID": "M12",
+      "name": "简易遥控器",
+      "iconKey": "themes/blackstream/products/simple-remote.png",
+      "illustrationKey": "items/rogue_6_scrap_M_12.png"
+    }
+  ],
+  "aliases": {
+    "themes/blackstream/marks/mark-3.png": "themes/blackstream/marks/mark-2.png",
+    "themes/blackstream/nodes/danger-enemy-cadejo.png": "themes/blackstream/nodes/danger-enemy.png",
+    "themes/blackstream/nodes/ideal-source.png": "themes/blackstream/nodes/wish.png"
+  },
+  "coverageNotes": [
+    "Atlas files are unmodified. Use source rectangles instead of inventing replacement artwork.",
+    "Path node symbols are included in the node atlas; dynamic roads use confirmed topology.",
+    "Area files are original backgrounds, not standalone area icons.",
+    "Downloaded assets do not imply implementation or support for every special game node."
+  ]
+}

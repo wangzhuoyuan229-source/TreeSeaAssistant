@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "scope": "Original app decoration and generic UI only; not gameplay symbols",
+  "files": [
+    {
+      "key": "phone",
+      "file": "backgrounds/iphone-ink-botanical-v1.png",
+      "kind": "background",
+      "name": "iPhone 深色植物墨迹背景",
+      "source": "/Users/wangzhuoyuan/.codex/generated_images/01a1343a-42f1-7921-921e-8c5d67f0ae90/exec-7a58e208-513a-4d05-becc-bcbe1919610b.png",
+      "bytes": 1908436,
+      "sha256": "a4aca30c8095d31f8e6f46679469ab4b7dc52a323dd8968a6330a84a7fce831c",
+      "width": 757,
+      "height": 2076,
+      "mode": "RGB",
+      "tool": "built-in image_gen",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "pad",
+      "file": "backgrounds/ipad-ink-botanical-v1.png",
+      "kind": "background",
+      "name": "iPad 深色植物墨迹背景",
+      "source": "/Users/wangzhuoyuan/.codex/generated_images/01a1343a-42f1-7921-921e-8c5d67f0ae90/exec-bd260abd-51d3-4de5-8e30-cad55b6009b1.png",
+      "bytes": 2324330,
+      "sha256": "4b7bda84f74bbed42db131cd720e0c05f9a3cb25559ca011d315f0812d507b3a",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB",
+      "tool": "built-in image_gen",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "icon",
+      "file": "branding/app-icon-master-v1.png",
+      "kind": "application-identity",
+      "name": "原创应用图标母版",
+      "source": "/Users/wangzhuoyuan/.codex/generated_images/01a1343a-42f1-7921-921e-8c5d67f0ae90/exec-e2321e63-2e16-4a8b-bea7-25c3e023af1a.png",
+      "bytes": 2481219,
+      "sha256": "dde40fb9b11c12fd2fd2a77cc6763a5a553bbed9960f39941e841a5773687e55",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "tool": "built-in image_gen",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "phone_animal",
+      "file": "backgrounds/iphone-animal-cover-v2.png",
+      "kind": "cover-background",
+      "name": "iPhone 动物骨骼版画封面",
+      "source": "/Users/wangzhuoyuan/.codex/generated_images/01a1343a-42f1-7921-921e-8c5d67f0ae90/exec-65dacb42-5303-4536-b3dc-6500c90dde9c.png",
+      "bytes": 2578476,
+      "sha256": "7c665a57e26a9ea5a6dc6c6631845ae6f06833aa70ea0644cb00ebc7e4433c22",
+      "width": 851,
+      "height": 1847,
+      "mode": "RGB",
+      "tool": "built-in image_gen",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "pad_animal",
+      "file": "backgrounds/ipad-animal-cover-v2.png",
+      "kind": "cover-background",
+      "name": "iPad 动物骨骼版画封面第二版",
+      "source": "/Users/wangzhuoyuan/.codex/generated_images/01a1343a-42f1-7921-921e-8c5d67f0ae90/exec-731c98fc-01c7-46d3-ad97-413ccaedd0da.png",
+      "bytes": 2292232,
+      "sha256": "6f193bb1e5ae502bea80665309a3a1f4ec1e07b9a25685cbaa4c0eb0435ca2bb",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB",
+      "tool": "built-in image_gen",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "animal_overlay",
+      "file": "decoration/deer-wolf-engraving-overlay-v1.png",
+      "kind": "animal-decoration",
+      "name": "透明鹿与狼版画装饰",
+      "transparent": true,
+      "source": "/Users/wangzhuoyuan/.codex/generated_images/01a1343a-42f1-7921-921e-8c5d67f0ae90/exec-d9b212e5-616f-4d24-b1fb-0ff213062d33.png",
+      "bytes": 2741658,
+      "sha256": "2d9cf5ac402a8d76642a19ce28db6d9b71c6a9abc742c98bd6ea42a1ebc5f3ef",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "tool": "built-in image_gen",
+      "generatedOn": "2026-10-13",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "transparentPixels": 793447,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "brand_overlay",
+      "file": "branding/app-emblem-overlay-v1.png",
+      "kind": "application-identity",
+      "name": "透明三瓣应用徽记",
+      "transparent": true,
+      "source": "/Users/wangzhuoyuan/.codex/generated_images/01a1343a-42f1-7921-921e-8c5d67f0ae90/exec-641af7b4-7a20-40ef-a7da-0d221ecca123.png",
+      "bytes": 2322352,
+      "sha256": "cf421ce5d7f5e267d0cc259af981c2b60c52200a0689d0c8c17c4279387aaf26",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "tool": "built-in image_gen",
+      "generatedOn": "2026-10-13",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "transparentPixels": 741840,
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "pad_combined",
+      "file": "backgrounds/ipad-animal-botanical-cover-v3.png",
+      "kind": "cover-background",
+      "name": "iPad 动物与植物合并封面",
+      "source": "/Users/wangzhuoyuan/.codex/generated_images/01a1343a-42f1-7921-921e-8c5d67f0ae90/exec-ca71137b-7535-48b8-bc79-69807b6d2573.png",
+      "bytes": 2739461,
+      "sha256": "2105ba98fe562090d88e4d9fb68ae1f599d7660bd9698335234e68e9824b5a73",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB",
+      "tool": "built-in image_gen",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "add",
+      "file": "ui-icons/add.svg",
+      "kind": "generic-ui",
+      "name": "添加",
+      "tool": "hand-authored editable SVG",
+      "bytes": 272,
+      "sha256": "437432149ea4170c644c6d795abbd78a263405a2a18ff2eb351cfa906681bf7a",
+      "viewBox": "0 0 24 24",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "back",
+      "file": "ui-icons/back.svg",
+      "kind": "generic-ui",
+      "name": "返回",
+      "tool": "hand-authored editable SVG",
+      "bytes": 271,
+      "sha256": "4257e3211abf151ccaf0d578558e7eff8d557c17fca1fcdd54cb2227ae4b9534",
+      "viewBox": "0 0 24 24",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "close",
+      "file": "ui-icons/close.svg",
+      "kind": "generic-ui",
+      "name": "关闭",
+      "tool": "hand-authored editable SVG",
+      "bytes": 276,
+      "sha256": "507aa6ca07d37bc99142046eb0aeb21763c3b6d6543fbc570ff0cef83194264b",
+      "viewBox": "0 0 24 24",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "confirm",
+      "file": "ui-icons/confirm.svg",
+      "kind": "generic-ui",
+      "name": "确认",
+      "tool": "hand-authored editable SVG",
+      "bytes": 276,
+      "sha256": "7338cee2f50ecf216f51a4e97fb0538be7406bfc8c25ff585b8321c6ec55db3d",
+      "viewBox": "0 0 24 24",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "file-import",
+      "file": "ui-icons/file-import.svg",
+      "kind": "generic-ui",
+      "name": "导入文件",
+      "tool": "hand-authored editable SVG",
+      "bytes": 373,
+      "sha256": "ee2144f6ceefb3a89e1628fb1a831b6da5156829b2e3a8b19de94909af7a039d",
+      "viewBox": "0 0 24 24",
+      "generatedOn": "2026-10-13"
+    },
+    {
+      "key": "settings",
+      "file": "ui-icons/settings.svg",
+      "kind": "generic-ui",
+      "name": "设置",
+      "tool": "hand-authored editable SVG",
+      "bytes": 386,
+      "sha256": "d885fcd40d31548994582d903bd00827426ce76ba94a2ef6717100225db1f02d",
+      "viewBox": "0 0 24 24",
+      "generatedOn": "2026-10-13"
+    }
+  ],
+  "selectedAssets": {
+    "iphoneCover": "backgrounds/iphone-animal-cover-v2.png",
+    "ipadCover": "backgrounds/ipad-animal-botanical-cover-v3.png",
+    "appIconMaster": "branding/app-icon-master-v1.png",
+    "quietIphoneBackground": "backgrounds/iphone-ink-botanical-v1.png",
+    "quietIpadBackground": "backgrounds/ipad-ink-botanical-v1.png",
+    "animalOverlay": "decoration/deer-wolf-engraving-overlay-v1.png",
+    "appEmblemOverlay": "branding/app-emblem-overlay-v1.png"
+  },
+  "selectionNotes": [
+    "Use the FIRST generated app icon master, per user instruction.",
+    "iPad cover v3 combines the animal top of v2 with the botanical lower frame of v1.",
+    "Master icon is 1254 square; export the platform-required 1024 square during asset-catalog integration. Do not use the transparent emblem as the opaque AppIcon.",
+    "Generated master image dimensions are recorded, not assumed from prompts."
+  ]
+}
