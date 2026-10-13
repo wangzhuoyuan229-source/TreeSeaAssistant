@@ -1,5 +1,6 @@
 import Foundation
 import TreeSeaCore
+nonisolated public struct SessionListing:Sendable {public var sessions:[MapSession];public var corruptCount:Int}
 nonisolated public struct SessionRepository: Sendable {
     public var directory: URL
     public init(directory: URL) {self.directory=directory}
@@ -19,6 +20,16 @@ nonisolated public struct SessionRepository: Sendable {
                   Set(session.resources.items.map(\.instanceID)).count==session.resources.items.count,session.resources.items.allSatisfy({(0...100).contains($0.remainingCharges)}) else {throw SessionError.corruptSession}
             return session
         } catch {throw SessionError.corruptSession}
+    }
+    public func listRecoverable() throws -> SessionListing {
+        guard FileManager.default.fileExists(atPath:directory.path) else {return SessionListing(sessions:[],corruptCount:0)}
+        let files=try FileManager.default.contentsOfDirectory(at:directory,includingPropertiesForKeys:nil)
+        var sessions:[MapSession]=[],corrupt=0
+        for url in files where url.pathExtension=="json" {
+            guard let id=UUID(uuidString:url.deletingPathExtension().lastPathComponent) else {corrupt += 1;continue}
+            do {if let session=try load(id:id) {sessions.append(session)}} catch {corrupt += 1}
+        }
+        return SessionListing(sessions:sessions.sorted{$0.updatedAt>$1.updatedAt},corruptCount:corrupt)
     }
     public func list() throws -> [MapSession] {
         guard FileManager.default.fileExists(atPath:directory.path) else {return []}

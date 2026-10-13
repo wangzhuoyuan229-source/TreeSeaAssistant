@@ -18,7 +18,7 @@ struct MapCanvasView:View {
             Canvas{context,size in
                 for edge in map.edges where edge.state != .absent {var path=Path();path.move(to:point(edge.a,size:size));path.addLine(to:point(edge.b,size:size));context.stroke(path,with:.color(ThemeTokens.textSecondary.color.opacity(0.65)),style:StrokeStyle(lineWidth:2,dash:edge.state == .inferred ? [5,5] : []))}
                 if let route {for step in route.steps {
-                    let a=point(step.action.from,size:size),b=point(step.action.to,size:size);var path=Path();path.move(to:a);path.addLine(to:b)
+                    let a=point(step.action.from,size:size),b=point(step.action.to,size:size);var path=Path();let ids=step.action.isFlight ? [step.action.from,step.action.to] : step.action.walkPath;for (i,id) in ids.enumerated(){if i==0{path.move(to:point(id,size:size))}else{path.addLine(to:point(id,size:size))}}
                     context.stroke(path,with:.color(ThemeTokens.capsuleRim.color),style:StrokeStyle(lineWidth:4,dash:step.action.isFlight ? [12,4] : []))
                     if step.action.isFlight {let angle=atan2(b.y-a.y,b.x-a.x);var arrow=Path();arrow.move(to:CGPoint(x:b.x-16*cos(angle-0.45),y:b.y-16*sin(angle-0.45)));arrow.addLine(to:b);arrow.addLine(to:CGPoint(x:b.x-16*cos(angle+0.45),y:b.y-16*sin(angle+0.45)));context.stroke(arrow,with:.color(ThemeTokens.capsuleRim.color),lineWidth:3)}
                 }}
@@ -38,7 +38,7 @@ struct MapWorkspaceView:View {
         HStack{Button("缩小"){model.viewport.scale=max(0.7,model.viewport.scale/1.2)};Button("放大"){model.viewport.scale=min(3,model.viewport.scale*1.2)};Button("重置视口"){model.viewport=MapViewport()}}.buttonStyle(.bordered).frame(minHeight:44)
         Text("实线：徒步道路 · 虚线：待确认道路 · 箭头：加工品飞行").font(.footnote).foregroundStyle(ThemeTokens.textSecondary.color)
         ActionCapsule(title:"导入地图截图",symbol:"photo"){model.importPurpose = .map}
-        HStack{NavigationLink("加工品与资源"){InventoryView(model:model)};NavigationLink("规划条件与推荐路线"){PlanRequestView(model:model)}}.buttonStyle(.bordered).frame(minHeight:44)
+        HStack{NavigationLink("加工品与资源",value:AppPage.inventory);NavigationLink("规划条件与推荐路线",value:AppPage.planning)}.buttonStyle(.bordered).frame(minHeight:44)
         DisclosureGroup("节点列表（可替代触摸地图）"){ForEach(model.store.session.map.nodes){node in Button{model.select(node.id,open:true)}label:{HStack{GameIcon(kind:node.observedKind).frame(width:32,height:32);Text("N\(node.id) · \(node.observedKind.name)");Spacer();if model.store.session.mustPass.contains(node.id){Label("必经",systemImage:"checkmark")}}.frame(minHeight:52)}.buttonStyle(.plain)}}
         if !wide {NodeInspectorView(model:model)}
     }.padding(20)}.navigationTitle("地图工作台")}

@@ -1,0 +1,82 @@
+[
+  {
+    "localResearchFilename": "maa-model.cpp",
+    "bytes": 55803,
+    "sha256": "b0975a60073abd815171dff217c67119334ebb9533edf16c31df96d35e7099f8"
+  },
+  {
+    "localResearchFilename": "maa-compact.cpp",
+    "bytes": 31298,
+    "sha256": "09a1e7274938236fec4a1f0112668af4ed9ce1da822b76e892165df3be04e7d2"
+  },
+  {
+    "localResearchFilename": "maa-safety.cpp",
+    "bytes": 24644,
+    "sha256": "aec0cc79630aee588000c4043ebaae99d46de378cec2fee018ab21a0d124b074"
+  },
+  {
+    "localResearchFilename": "maa-state.h",
+    "bytes": 4865,
+    "sha256": "173c84cf3427c96e37d1ce1ca512a825d206762201d04e41633e88261aecceb5"
+  },
+  {
+    "localResearchFilename": "maa-planner.cpp",
+    "bytes": 94561,
+    "sha256": "210d6863850753eb37b7bdf63cc7c1483274c8fa990415932c2fd736a8c40267"
+  },
+  {
+    "localResearchFilename": "maa-templates.json",
+    "bytes": 137814,
+    "sha256": "b62d50813fefb1d8162cf24c451301ec100a5d7c03bbb3f5de1197519e7388ae"
+  },
+  {
+    "localResearchFilename": "maa-runtime.json",
+    "bytes": 842,
+    "sha256": "a500ec55aa9beb9afffeeeaaf9860c1b66d676acbb64eea92044818a4c66982f"
+  },
+  {
+    "localResearchFilename": "maa-edge.json",
+    "bytes": 1210,
+    "sha256": "de9b8d5aaa7e233de74cd177d326338d6cef14291d990c85b34a58317e69253c"
+  },
+  {
+    "localResearchFilename": "maa-strategy.json",
+    "bytes": 83698,
+    "sha256": "5442e7fc1e5e2be67f2dc4e735fe80f449b45fd6091cffdf2f530037d0110a0c"
+  },
+  {
+    "localResearchFilename": "maa-perception.json",
+    "bytes": 8671,
+    "sha256": "c5c2449d2145fcd019ce0fb98aa0077176415f862969f8a4952d0435f015aebb"
+  },
+  {
+    "localResearchFilename": "maa-corridor.onnx",
+    "bytes": 3437161,
+    "sha256": "864655b11fef3080839a86e6ef6976364924064afb439de6a83ce3288809a9aa"
+  },
+  {
+    "localResearchFilename": "hlsh-filter.py",
+    "bytes": 9166,
+    "sha256": "aa829fa104a7758b2484255664649f9ac6a14f0bfcd582108494d9f1a8441ff5"
+  },
+  {
+    "localResearchFilename": "hlsh-distance.json",
+    "bytes": 2277,
+    "sha256": "9814df80e9cba27f79170d172f9010b0c8f47c5b45257ed2ca81d026fc3cc73a"
+  },
+  {
+    "localResearchFilename": "hlsh-count.json",
+    "bytes": 2311,
+    "sha256": "b4d389120da0df31b4a8d5e7e685e18cc1c44afaf62e0b6e6ef2bcba711dc302"
+  },
+  {
+    "localResearchFilename": "hlsh-categories.json",
+    "bytes": 250,
+    "sha256": "d18bd377259ce81a4f05d21f54aebd0247a3b73ffb9410b9e19c34d9bf3ce144"
+  },
+  {
+    "localResearchFilename": "maa-safety.h",
+    "bytes": 4915,
+    "sha256": "b5b51f1cc09ae48804c7da93876a656eb84603162ce4a1d8b65a116335548d5c"
+  }
+]

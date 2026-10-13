@@ -42,9 +42,41 @@ import TreeSeaCore
         }
         publish(next)
     }
+    private func mergeObservedMap(_ incoming:FloorMap, corrections:Set<NodeID>) throws -> FloorMap {
+        let old=session.map,sameGrid=incoming.floor==old.floor && incoming.rows==old.rows && incoming.columns==old.columns
+        if incoming.originalCoverage == .partial && !sameGrid {throw SessionError.unconfirmed}
+        var map=incoming
+        if incoming.originalCoverage == .partial {
+            var merged=old
+            for node in incoming.nodes {if let i=merged.nodes.firstIndex(where:{$0.id==node.id}) {merged.nodes[i]=node} else {merged.nodes.append(node)}}
+            for edge in incoming.edges {if let i=merged.edges.firstIndex(where:{$0.a==edge.a && $0.b==edge.b}) {merged.edges[i]=edge} else {merged.edges.append(edge)}}
+            merged.initialStartID=incoming.initialStartID ?? old.initialStartID;merged.currentNodeID=incoming.currentNodeID ?? old.currentNodeID
+            merged.startEvidence=incoming.initialStartID==nil ? old.startEvidence : incoming.startEvidence
+            merged.exitIDs=old.exitIDs.subtracting(Set(incoming.nodes.map(\.id))).union(incoming.exitIDs)
+            merged.originalCoverage = .partial;merged.topologyVerified=incoming.topologyVerified && old.topologyVerified
+            merged.templateID=incoming.templateID ?? old.templateID
+            map=merged
+        }
+        if sameGrid {
+            for i in map.nodes.indices {
+                guard !corrections.contains(map.nodes[i].id),let previous=old.node(map.nodes[i].id),previous.progress == .completed,map.nodes[i].observedKind == .empty else {continue}
+                map.nodes[i].originalKind=previous.originalKind;map.nodes[i].progress=previous.progress
+                map.nodes[i].identityEvidence=previous.identityEvidence;map.nodes[i].rewardClaimed=previous.rewardClaimed
+                map.nodes[i].confirmedAPGain=previous.confirmedAPGain;map.nodes[i].lookoutRevealCount=previous.lookoutRevealCount;map.nodes[i].battleScope=previous.battleScope
+            }
+        }
+        return map
+    }
+    public func prepare(_ proposal:RecognitionProposal) throws -> RecognitionProposal {
+        var prepared=proposal
+        if let map=proposal.map {prepared.map=try mergeObservedMap(map,corrections:proposal.originalIdentityCorrections)}
+        return prepared
+    }
     public func commit(_ proposal: RecognitionProposal, expected: RevisionStamp, actionPoints: Int? = nil) throws {
         guard expected==session.stamp else {throw SessionError.stale}
-        guard proposal.confirmed,let map=proposal.map,map.initialStartID != nil,map.currentNodeID != nil,!map.exitIDs.isEmpty,map.startEvidence == .userConfirmed else {throw SessionError.unconfirmed}
+        guard proposal.confirmed,let incoming=proposal.map else {throw SessionError.unconfirmed}
+        let map=try mergeObservedMap(incoming,corrections:proposal.originalIdentityCorrections)
+        guard map.initialStartID != nil,map.currentNodeID != nil,!map.exitIDs.isEmpty,map.startEvidence == .userConfirmed else {throw SessionError.unconfirmed}
         try MapValidator.validate(map)
         guard session.mustPass.allSatisfy({map.node($0) != nil}),map.floor==session.map.floor || session.mustPass.isEmpty else {throw SessionError.invalidInput}
         if let actionPoints, !(0...1000).contains(actionPoints) {throw SessionError.invalidInput}
@@ -54,27 +86,38 @@ import TreeSeaCore
         next.title="第 \(map.floor) 层 · 截图会话"
         publish(next)
     }
+    public func prepareInventory(_ proposal:InventoryProposal) -> InventoryProposal {
+        var prepared=proposal
+        for i in prepared.entries.indices {
+            let key=proposal.digest+":"+(prepared.entries[i].observationKey ?? prepared.entries[i].id.uuidString)
+            if let id=session.processedInventoryObservations[key] {prepared.entries[i].existingID=id}
+        }
+        return prepared
+    }
     public func commitInventory(_ proposal: InventoryProposal, expected: RevisionStamp, replaceAll: Bool = false) throws {
         guard expected==session.stamp else {throw SessionError.stale}
         guard !proposal.digest.isEmpty else {throw SessionError.invalidInput}
-        if session.importedDigests.contains(proposal.digest) {return}
-        guard !replaceAll || proposal.coverage == .complete else {throw SessionError.unconfirmed}
-        var items=replaceAll ? [] : session.resources.items
+        guard !replaceAll || (proposal.coverage == .complete && proposal.entries.count==proposal.observedEntryCount && proposal.entries.allSatisfy({$0.confirmed && $0.remainingCharges != nil})) else {throw SessionError.unconfirmed}
+        var items=replaceAll ? [] : session.resources.items,records=session.processedInventoryObservations
         for entry in proposal.entries {
             guard entry.confirmed,let charges=entry.remainingCharges,(0...100).contains(charges) else {throw SessionError.unconfirmed}
-            if let id=entry.existingID {
+            let key=proposal.digest+":"+(entry.observationKey ?? entry.id.uuidString),recorded=records[key]
+            let existingID=entry.existingID ?? recorded
+            if let id=existingID {
                 guard let existing=session.resources.items.first(where:{$0.id==id}),existing.typeID==entry.typeID else {throw SessionError.ambiguousInventory}
-                var item=existing;item.remainingCharges=charges;item.confirmedEffects=entry.effects;item.evidence = .userConfirmed
+                var item=existing;item.remainingCharges=charges;item.evidence = .userConfirmed
+                if entry.clearEffectsConfirmed {item.confirmedEffects=nil} else if let effects=entry.effects {item.confirmedEffects=effects}
                 if let index=items.firstIndex(where:{$0.id==id}) {items[index]=item} else {items.append(item)}
+                records[key]=id
             } else {
                 guard entry.newInstanceConfirmed else {throw SessionError.ambiguousInventory}
-                items.append(ItemInstance(id:entry.id,typeID:entry.typeID,remainingCharges:charges,confirmedEffects:entry.effects))
+                items.append(ItemInstance(id:entry.id,typeID:entry.typeID,remainingCharges:charges,confirmedEffects:entry.effects));records[key]=entry.id
             }
         }
-        guard items.count<=64 else {throw SessionError.invalidInput}
+        guard items.count<=64,Set(items.map(\.id)).count==items.count else {throw SessionError.invalidInput}
         var next=session;next.resources.items=items
         if next.resources.items != session.resources.items {next.resources.resourceRevision += 1}
-        next.importedDigests.insert(proposal.digest);publish(next)
+        next.importedDigests.insert(proposal.digest);next.processedInventoryObservations=records;publish(next)
     }
     public func commitMovePreview(_ proposal: MovementPreviewProposal, expected: RevisionStamp) throws {
         guard expected==session.stamp else {throw SessionError.stale}
@@ -90,9 +133,10 @@ import TreeSeaCore
         guard token == nil || token==computationID, result.stamp==session.stamp,session.predictionIsCurrent,
               result.predictionID==session.prediction?.predictionID,result.ruleVersion==session.ruleVersion,
               result.movementCatalogVersion==session.movementVersion,result.scoreProfileVersion==session.scoreVersion,
-              result.status != .cancelled,result.status != .invalidInput,
+              result.status != .cancelled,
               result.recommendations.allSatisfy({$0.covered==session.mustPass && session.map.exitIDs.contains($0.finalState.current) && $0.finalState.ap>=0 && $0.finalState.charges.allSatisfy{$0>=0}}) else {return false}
-        session.routes=result;isComputing=false;return true
+        if result.status == .feasible && !result.recommendations.isEmpty {session.routes=result;session.latestPlanningFailure=nil} else {session.latestPlanningFailure=result}
+        isComputing=false;return result.status != .invalidInput
     }
     public func beginComputation() -> UUID {let id=UUID();computationID=id;isComputing=true;return id}
     public func cancelComputation() {computationID=nil;isComputing=false}

@@ -1,0 +1,151 @@
+{
+  "sourceCommit": "59bd4cecf6420f963add79ee005f969a7f5d6131",
+  "sourceFunction": "BlackFlowSafetyValue.cpp:SafetyValueSolver",
+  "harnessDifference": "OnDemand host adapter omitted; original solver and header retained; state ID aliases supplied for synthetic callbacks",
+  "cases": [
+    {
+      "scenario": 0,
+      "ap": 0,
+      "minimumRequiredAP": 2,
+      "reachable": false
+    },
+    {
+      "scenario": 0,
+      "ap": 1,
+      "minimumRequiredAP": 2,
+      "reachable": false
+    },
+    {
+      "scenario": 0,
+      "ap": 2,
+      "minimumRequiredAP": 2,
+      "reachable": true
+    },
+    {
+      "scenario": 0,
+      "ap": 3,
+      "minimumRequiredAP": 2,
+      "reachable": true
+    },
+    {
+      "scenario": 0,
+      "ap": 4,
+      "minimumRequiredAP": 2,
+      "reachable": true
+    },
+    {
+      "scenario": 0,
+      "ap": 5,
+      "minimumRequiredAP": 2,
+      "reachable": true
+    },
+    {
+      "scenario": 1,
+      "ap": 0,
+      "minimumRequiredAP": 1,
+      "reachable": false
+    },
+    {
+      "scenario": 1,
+      "ap": 1,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 1,
+      "ap": 2,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 1,
+      "ap": 3,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 1,
+      "ap": 4,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 1,
+      "ap": 5,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 2,
+      "ap": 0,
+      "minimumRequiredAP": 1,
+      "reachable": false
+    },
+    {
+      "scenario": 2,
+      "ap": 1,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 2,
+      "ap": 2,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 2,
+      "ap": 3,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 2,
+      "ap": 4,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 2,
+      "ap": 5,
+      "minimumRequiredAP": 1,
+      "reachable": true
+    },
+    {
+      "scenario": 3,
+      "ap": 0,
+      "minimumRequiredAP": 2,
+      "reachable": false
+    },
+    {
+      "scenario": 3,
+      "ap": 1,
+      "minimumRequiredAP": 2,
+      "reachable": false
+    },
+    {
+      "scenario": 3,
+      "ap": 2,
+      "minimumRequiredAP": 2,
+      "reachable": true
+    },
+    {
+      "scenario": 3,
+      "ap": 3,
+      "minimumRequiredAP": 2,
+      "reachable": true
+    },
+    {
+      "scenario": 3,
+      "ap": 4,
+      "minimumRequiredAP": 2,
+      "reachable": true
+    },
+    {
+      "scenario": 3,
+      "ap": 5,
+      "minimumRequiredAP": 2,
+      "reachable": true
+    }
+  ]
+}

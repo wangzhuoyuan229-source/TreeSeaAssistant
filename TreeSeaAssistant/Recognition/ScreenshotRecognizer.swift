@@ -65,7 +65,11 @@ nonisolated enum InventoryRecognizer {
     @concurrent static func recognize(_ screenshot:PreparedScreenshot,catalog:MovementCatalog,coverage:InventoryObservationCoverage) async throws -> InventoryProposal {
         let image=try ImagePreprocessor.image(screenshot),texts=try ScreenshotRecognizer.texts(image,width:screenshot.width,height:screenshot.height)
         if Task.isCancelled {throw ScreenshotError.cancelled}
-        return InventoryTextParser.parse(texts,catalog:catalog,digest:screenshot.digest,coverage:coverage)
+        let absolute=texts.map {text -> RecognizedText in
+            let point=screenshot.transform.toOriginal(CGPoint(x:text.center.x,y:text.center.y))
+            return RecognizedText(text:text.text,center:Point2D(x:point.x,y:point.y),confidence:text.confidence)
+        }
+        return InventoryTextParser.parse(absolute,catalog:catalog,digest:screenshot.digest,coverage:coverage)
     }
     @concurrent static func recognizeMovePreview(_ screenshot:PreparedScreenshot,from:NodeID?,target:NodeID?,itemInstanceID:UUID?) async throws -> MovementPreviewProposal {
         let image=try ImagePreprocessor.image(screenshot),texts=try ScreenshotRecognizer.texts(image,width:screenshot.width,height:screenshot.height)

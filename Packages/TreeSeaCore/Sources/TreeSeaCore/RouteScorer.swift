@@ -23,6 +23,6 @@ extension RouteScorer {
         let node=snapshot.map.node(action.to)!,first=before.claimed & snapshot.bit(action.to)==0
         let itemPenalty: Int
         if let type=action.itemType,let spec=snapshot.movements.spec(type) { itemPenalty=spec.expiresOnFloorEnd ? 12 : 24 } else { itemPenalty=0 }
-        return ScoreDelta(reward:first ? rewardUnits(node) : 0,apPenalty:4*action.cost,edgePenalty:action.isFlight ? 0 : 1,itemPenalty:itemPenalty,battlePenalty:first ? battleUnits(node) : 0,resourceReward:4*action.gain.hope+2*action.gain.ingots)
+        return ScoreDelta(reward:first ? rewardUnits(node) : 0,apPenalty:4*action.cost,edgePenalty:action.isFlight ? 0 : max(0,action.walkPath.count-1),itemPenalty:itemPenalty,battlePenalty:first ? battleUnits(node) : 0,resourceReward:4*action.gain.hope+2*action.gain.ingots)
     }
 }

@@ -34,8 +34,11 @@ public enum RouteSelector {
         for step in steps {
             let target=step.action.to
             if let item=step.action.itemType { parts.append("\(item):\(step.action.from)>\(target)") }
-            if let node=snapshot.map.node(target), (node.observedKind != .empty && node.observedKind != .start) || snapshot.mustPassNodeIDs.contains(target) || snapshot.map.exitIDs.contains(target) {
-                if seen.insert(target).inserted { parts.append("N\(target)") }
+            let stops=step.action.isFlight ? [target] : Array(step.action.walkPath.dropFirst())
+            for stop in stops {
+                if let node=snapshot.map.node(stop), (node.observedKind != .empty && node.observedKind != .start) || snapshot.mustPassNodeIDs.contains(stop) || snapshot.map.exitIDs.contains(stop) {
+                    if seen.insert(stop).inserted {parts.append("N\(stop)")}
+                }
             }
         }
         return parts.joined(separator:"|")

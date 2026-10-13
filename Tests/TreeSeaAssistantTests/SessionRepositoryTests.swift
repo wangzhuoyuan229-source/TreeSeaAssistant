@@ -17,3 +17,13 @@ struct SessionRepositoryTests {
         #expect(try String(contentsOf:url,encoding:.utf8)=="broken")
     }
 }
+struct SessionRecoveryTests {
+    @Test func corruptSessionDoesNotHideOtherValidSessions() throws {
+        let dir=FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString),repository=SessionRepository(directory:dir),good=try sampleSession();var bad=try sampleSession();bad.id=UUID()
+        defer{try? FileManager.default.removeItem(at:dir)}
+        try repository.save(good);try repository.save(bad)
+        let badFile=dir.appendingPathComponent(bad.id.uuidString+".json");try Data("broken".utf8).write(to:badFile)
+        let listed=try repository.listRecoverable()
+        #expect(listed.sessions==[good]);#expect(listed.corruptCount==1);#expect(try String(contentsOf:badFile,encoding:.utf8)=="broken")
+    }
+}

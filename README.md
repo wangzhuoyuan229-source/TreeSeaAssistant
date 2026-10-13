@@ -1,21 +1,36 @@
 # 黑流树海 iOS 辅助 App
 
-本项目计划开发仅面向 iPhone 和 iPad 的明日方舟黑流树海辅助工具，以 MAA 黑流树海模块为主要功能和算法来源。首版优先完成地图与加工品截图导入、资源确认、未知诡秘候选集合，以及满足必经节点条件的多条推荐路线，采用离线计算。地图感知、加工品模型、资源转移、安全求解和路线搜索优先移植 MAA 的机制；候选筛选采用 hlsh-helper，不计算节点概率、不显示类型百分比。路标补充地图编辑和导入确认流程，羽瞰点补充结果保留与路线展示参考。实时识别和小窗显示后续单独评估。
+面向 iPhone/iPad（iOS/iPadOS 17+）的离线截图、节点候选与路线辅助工具。当前已建立 SwiftUI 工程、独立 TreeSeaCore、截图/库存提案与人工确认、本地会话和多路线解释。**源码和宿主验证已交付；iOS 构建、设备 UI、实战与真机性能验收尚未完成，不能称为已验收首版。**
 
-目前已按用户提供的四张截图写入新版 UI 规划，并保留四张历史页面预览。最新原版素材要求优先：游戏对象使用路标原版图标，自建背景包含动物骨骼版画装饰；旧预览中的概率条和想象出的道具图案不作为正式实现依据。已下载 11 张原版图集/背景并记录 76 个映射，已保存 8 张自建 PNG 与 6 个通用 SVG。iPad 封面采用动物与植物合并 v3，App 图标采用第一次生成的三瓣徽记。尚无 App 源码、可运行工程或实测性能结果。文件夹现有名称包含 Mac，不代表产品包含 macOS 客户端。
+已实现的核心包括原始节点身份保留、出生点 BFS、11 类未知诡秘按源顺序筛选、全图配额传播、12 种加工品逐实例库存（随机 M07 不进入确定路线）、最多 8 个无序必经节点和最多三条不同推荐。评分采用已确认收益、固定探索分和保守战斗代价，不计算概率。截图仅作为提案，确认后才提交；重复/部分库存不会默默累加或清空，查看方案不扣真实资源。
 
-## 开发文档
+UI 采用已批准的 V2 美术与原版图标，含会话、导入裁剪、地图编辑、库存确认、候选、规划条件、路线比较和步骤台账，按内容宽度与辅助功能字号组织单/双/三栏。自动识别支持范围尚待实战确认，人工模板、地图、道路与库存录入可继续操作。
 
-1. [需求与算法规格](docs/ios-app-spec.md)：产品边界、地图状态、hlsh-helper 候选筛选规则、路线搜索、初始权重和验收条件。
-2. [详细开发计划](docs/superpowers/plans/2026-10-13-ios-screenshot-prediction-planning.md)：算法与前端任务、V2 设计风格、iPhone/iPad 分栏与窄窗口适配、模块接口、测试和验收。
-3. [UI 设计规范](docs/ui-design-spec.md)：黑流树海视觉规则、业务页面、状态语义、iPhone/iPad 适配及统一合成示例。
-4. [UI 文档与预览制作计划](docs/ui-design-production-plan.md)：本次文档和 11 张静态图片的制作顺序与验收边界。
-5. [界面效果预览](docs/ui-previews/README.md)：图片索引、示例数据与检查结果；概念图不代表功能已实现。
-6. [四张截图参考版 UI 规划 V2](docs/ui-design-reference-v2.md)：本次最新视觉方向及关键业务页面规划。
-7. [四图参考版预览](docs/ui-previews/reference-v2/README.md)：本轮首页、地图工作台、加工品确认与路线比较。
-8. [原版游戏图标与映射](图标/README.md)：路标原始 PNG、图集坐标、加工品配对、来源与校验值。
-9. [自建素材与选用版本](自建素材/README.md)：动物/植物背景、首次应用图标、透明装饰、通用 UI 图标和实际提示词。
-10. [素材下载状态](docs/asset-download-status.md)：当前交付、核验和历史问题记录。
+## 本地验证与运行
 
-执行开发时先阅读业务规格、V2 视觉规划和 UI 规范，再按计划逐任务实施；V2 为当前视觉主依据，旧规范补充有效的交互与无障碍要求。优先将已核对的 MAA 核心机制移植到 Swift 与 Apple 识别框架，候选模块补用 hlsh-helper。首版必经节点、多路线选择、截图人工确认和现有评分属于 App 适配，不能标为 MAA 原生能力或原始权重。逐项记录固定提交、来源、许可和对照结果。
+```bash
+scripts/test-core.sh
+scripts/test-support.sh
+python3 scripts/validate-project.py
+```
 
+Core/Support/Recognition 可在开发宿主运行测试。App 需要完整 Xcode 与 iOS SDK，打开 TreeSeaAssistant.xcodeproj，使用共享 scheme TreeSeaAssistant。当前开发机只有 CommandLineTools，未执行成功的 iOS 构建或模拟器测试。
+
+```bash
+scripts/verify-ios.sh
+```
+
+该脚本先编译并列出真实 destinations；按输出设置 TREESEA_SIMULATOR_ID 和 TREESEA_IPAD_SIMULATOR_ID 后运行两类模拟器测试。真机、实战图片与人工验收另按验收记录执行。项目只建立本地实施分支，未配置远端或发布。
+
+## 文档
+
+- [验收状态、证据和待完成项](docs/acceptance/report.md)
+- [实施记录](docs/implementation-progress.md)
+- [独立审查与修复](docs/acceptance/review.md)
+- [需求与算法规格](docs/ios-app-spec.md)
+- [原开发计划](docs/superpowers/plans/2026-10-13-ios-screenshot-prediction-planning.md)（保留规划时的历史状态，当前进度以实施/验收记录为准）
+- [MAA 对照和适配差异](docs/maa-porting-notes.md)、[数据来源与许可状态](docs/data-provenance.md)
+- [V2 视觉依据](docs/ui-design-reference-v2.md)、[交互与无障碍规范](docs/ui-design-spec.md)
+- [原版素材](图标/README.md)、[自建素材](自建素材/README.md)、[历史预览](docs/ui-previews/reference-v2/README.md)
+
+规则与 43 张模板保留 researchReference，不把公开源码当作游戏实测。用户在设置中明确核对后才启用强规则；普通未知凶戾要求人工确认战斗范围，未建模特殊节点须揭示。MAA、hlsh-helper、路标与自建资源的来源分开记录，后续分发许可另行核对。

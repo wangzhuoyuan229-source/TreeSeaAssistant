@@ -55,3 +55,33 @@ struct RoutePlannerTests {
         #expect(s.resources.items[0].remainingCharges==1)
     }
 }
+struct ReviewPlanningRegressionTests {
+    @Test func actualNonAdjacentWalkCostCoversIntermediateMustPass() throws {
+        var s=try snapshot(lineMap([.start,.empty,.exit]),ap:1,must:[1])
+        s.resources.costOverrides=[CostOverride(from:0,to:2,cost:1)]
+        let result=RoutePlanner.plan(PlanRequest(snapshot:s))
+        #expect(result.status == .feasible);#expect(result.recommendations.first?.covered==[1]);#expect(result.recommendations.first?.grossAP==1)
+    }
+    @Test func inconsistentUnknownCannotBeMadeExecutable() throws {
+        var s=try snapshot(lineMap([.start,.unknownMystery,.exit]),ap:3)
+        s.prediction.candidates[1]=[];s.prediction.propagationStatus = .conflict
+        #expect(RoutePlanner.plan(PlanRequest(snapshot:s)).recommendations.isEmpty)
+        s.map.edges.append(MapEdge(0,2))
+        let routes=RoutePlanner.plan(PlanRequest(snapshot:s)).recommendations
+        #expect(!routes.isEmpty);#expect(routes.allSatisfy{$0.steps.allSatisfy{$0.action.to != 1}})
+    }
+}
+struct FinalizationBudgetTests {
+    @Test func deadlineAtResultFinalizationMarksLimitedWithoutLosingCompletedRoute() throws {
+        final class Clock {var calls=0;func now()->UInt64{calls += 1;return calls<13 ? 0:1_000_000_000}}
+        var map=lineMap([.start,.exit]);map.currentNodeID=1
+        let s=try snapshot(map,ap:0),clock=Clock()
+        let result=RoutePlanner.plan(PlanRequest(snapshot:s),nowNanoseconds:clock.now)
+        #expect(result.status == .feasible);#expect(result.budgetLimited)
+    }
+    @Test func safetyPhaseExpiryDoesNotStopRemainingSearch() throws {
+        final class Clock {var time:UInt64=0;func now()->UInt64{time=min(140_000_000,time+20_000_000);return time}}
+        let s=try snapshot(lineMap([.start,.exit]),ap:1),clock=Clock()
+        #expect(RoutePlanner.plan(PlanRequest(snapshot:s),nowNanoseconds:clock.now).status == .feasible)
+    }
+}

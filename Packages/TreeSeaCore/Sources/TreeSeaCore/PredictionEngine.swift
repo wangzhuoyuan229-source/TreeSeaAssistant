@@ -19,6 +19,7 @@ extension PredictionEngine {
         if rules.rules.contains(where: { $0.floor == map.floor && !$0.provenance.status.strong }) { result.warnings.append("参考规则未独立核对，保留候选并跳过对应约束") }
         for node in map.nodes.sorted(by:{$0.id<$1.id}) where node.originalKind == .unknownMystery {
             if control?.stopped == true { result.candidates=[:]; result.exclusions=[:]; result.propagationStatus=control?.cancelled == true ? .cancelled : .incomplete; return result }
+            if !node.identityEvidence.confirmed {result.candidates[node.id]=rules.order;result.warnings.append("N\(node.id) 的未知类别尚未确认，跳过局部强排除");continue}
             var retained: [NodeKind]=[], reasons: [CandidateReason]=[]
             for kind in rules.order {
                 guard let rule=rules.rule(kind,floor:map.floor), rule.provenance.status.strong else { retained.append(kind); continue }

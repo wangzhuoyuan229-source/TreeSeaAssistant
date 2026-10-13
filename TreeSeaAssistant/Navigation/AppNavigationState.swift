@@ -11,7 +11,10 @@ nonisolated enum AppSection: String, CaseIterable, Identifiable {case map,sessio
     var selectedNodeID:NodeID?
     var selectedRouteSignature:String?
     var path=NavigationPath()
+    var routePages:[String:RoutePageSnapshot]=[:]
 }
+nonisolated enum AppPage:Hashable {case inventory,planning,roads,manualMap,route(String)}
+nonisolated struct RoutePageSnapshot {var route:RouteRecommendation;var stamp:RevisionStamp;var predictionID:UUID}
 nonisolated struct MapViewport {var scale:CGFloat=1;var translation:CGSize = .zero}
 nonisolated enum ImportPurpose: String, Identifiable, CaseIterable {
     case map,inventory,detail,movePreview
@@ -32,6 +35,7 @@ nonisolated struct NodeDraft:Identifiable {var node:MapNode;var id:NodeID {node.
     var savedSessions:[MapSession]=[]
     var apDraft="6"
     private var computationTask:Task<Void,Never>?
+    private var corruptWarningCount=0
     var selectedRoute:RouteRecommendation? {store.session.routes?.recommendations.first{$0.signature==navigation.selectedRouteSignature} ?? store.session.routes?.recommendations.first}
     init() {
         let bundle=(try? CatalogLoader.bundled()) ?? CatalogBundle(rules:RuleCatalog(version:"unavailable",rules:[]),templates:TemplateCatalog(version:"unavailable",templates:[]))
@@ -44,7 +48,7 @@ nonisolated struct NodeDraft:Identifiable {var node:MapNode;var id:NodeID {node.
         repository=SessionRepository(directory:dir)
         let initial=Self.demo(rule:bundle.rules.version,movement:items.version)
         store=SessionStore(session:initial)
-        do {savedSessions=try repository.list();if let recent=savedSessions.first {try store.replaceSession(recent)}} catch {error="本地会话恢复失败，损坏文件已保留。当前显示独立合成示例。"}
+        do {let listing=try repository.listRecoverable();savedSessions=listing.sessions;corruptWarningCount=listing.corruptCount;if listing.corruptCount>0 {self.error="有 \(listing.corruptCount) 份会话损坏，原文件已保留；其他有效会话仍可使用。"};if let recent=savedSessions.first {try store.replaceSession(recent)}} catch {self.error="本地会话恢复失败，损坏文件已保留。当前显示独立合成示例。"}
         apDraft=String(store.session.resources.actionPoints)
         if items.movements.isEmpty {error="本地加工品目录载入失败，暂不能规划。"}
     }
@@ -57,7 +61,7 @@ nonisolated struct NodeDraft:Identifiable {var node:MapNode;var id:NodeID {node.
         return MapSession(title:"合成示例 · 非实战存档",map:map,resources:RunResources(actionPoints:6),ruleVersion:rule,movementVersion:movement)
     }
     func apply(_ edit:SessionEdit) {do {try store.apply(edit);persist();recompute()} catch {self.error="修改未提交，请检查节点、次数或最多 8 个必经条件。"}}
-    func persist() {do {try repository.save(store.session);savedSessions=try repository.list()} catch {self.error="会话保存或读取失败；现有文件已保留。"}}
+    func persist() {do {try repository.save(store.session);let listing=try repository.listRecoverable();savedSessions=listing.sessions;if listing.corruptCount>corruptWarningCount {self.error="有 \(listing.corruptCount) 份会话损坏，原文件已保留；其他有效会话仍可使用。"};corruptWarningCount=listing.corruptCount} catch {self.error="会话保存或读取失败；现有文件已保留。"}}
     func recompute() {
         computationTask?.cancel()
         let id=store.beginComputation(),session=store.session,rules=catalog.rules,movements=movements
@@ -68,7 +72,7 @@ nonisolated struct NodeDraft:Identifiable {var node:MapNode;var id:NodeID {node.
     }
     func cancel() {computationTask?.cancel();store.cancelComputation()}
     func undo() {cancel();store.undo();apDraft=String(store.session.resources.actionPoints);persist();recompute()}
-    func restore(_ session:MapSession) {do {cancel();try store.replaceSession(session);navigation.selectedNodeID=nil;navigation.selectedRouteSignature=nil;viewport=MapViewport();apDraft=String(session.resources.actionPoints);recompute()} catch {error="无法恢复这份会话，原文件已保留。"}}
+    func restore(_ session:MapSession) {do {cancel();try store.replaceSession(session);navigation.path=NavigationPath();navigation.routePages=[:];navigation.selectedNodeID=nil;navigation.selectedRouteSignature=nil;viewport=MapViewport();apDraft=String(session.resources.actionPoints);recompute()} catch {self.error="无法恢复这份会话，原文件已保留。"}}
     func newDemo() {restore(Self.demo(rule:catalog.rules.version,movement:movements.version));navigation.selectedSection = .map}
     func select(_ id:NodeID,open:Bool=false) {navigation.selectedNodeID=id;if open,let node=store.session.map.node(id) {nodeDraft=NodeDraft(node:node)}}
 }

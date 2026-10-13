@@ -44,5 +44,21 @@
       "decisionEqual": true
     }
   ],
-  "gameScreenshotValidation": "not performed"
+  "gameScreenshotValidation": "not performed",
+  "nearThresholdSyntheticComparison": [
+    {
+      "alpha": 0.12044183164834976,
+      "sourceLogit": 2.2221877574920654,
+      "coreMLLogit": 2.2221856117248535,
+      "absoluteError": 2.1457672119140625e-06,
+      "hasEdge": false
+    },
+    {
+      "alpha": 0.12065807729959488,
+      "sourceLogit": 2.262197732925415,
+      "coreMLLogit": 2.26220703125,
+      "absoluteError": 9.298324584960938e-06,
+      "hasEdge": true
+    }
+  ]
 }

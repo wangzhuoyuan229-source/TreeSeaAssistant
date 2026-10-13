@@ -113,9 +113,13 @@ public enum RoutePlanner {
         result.expansions=control.expansions; result.labels=control.labels; result.budgetLimited=control.budgetLimited
         if control.cancelled {result.status = .cancelled;return result}
         result.recommendations=RouteSelector.select(pool,maximum:request.maximumRecommendations)
+        _ = control.stopped
+        result.budgetLimited=control.budgetLimited
+        if control.cancelled {result.status = .cancelled;return result}
         result.status = !result.recommendations.isEmpty ? .feasible : (result.budgetLimited || result.heuristicLimited ? .unresolved : .noFeasibleRoute)
         if result.budgetLimited {result.warnings.append("共享预算已用尽；未声称全局最优")}
         if result.heuristicLimited {result.warnings.append("候选池或前缀保留已截断")}
+        if s.prediction.propagationStatus == .conflict || s.prediction.candidates.values.contains(where:{$0.isEmpty}) {result.warnings.append("空候选或规则冲突的未知节点未用于可执行路线，请先复核")}
         if s.map.edges.contains(where:{$0.state == .inferred}) {result.warnings.append("推断道路未用于可执行徒步步骤")}
         return result
     }

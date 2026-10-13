@@ -94,8 +94,8 @@ extension PredictionEngine {
         let control=SearchControl(milliseconds:budget.milliseconds,maxChecks:budget.maxChecks,shouldCancel:shouldCancel,nowNanoseconds:nowNanoseconds)
         var result=local(map:map,rules:rules,control:control)
         guard ![.incomplete,.cancelled,.invalidInput,.conflict].contains(result.propagationStatus) else { return result }
-        guard map.originalCoverage == .complete, map.topologyVerified, map.startEvidence == .userConfirmed,
-              !map.nodes.contains(where: { $0.originalKind == .unknown || (!$0.originalKind.isHidden && !$0.identityEvidence.confirmed) || $0.originalKind == .unknownMystery && $0.progress == .completed }),
+        guard map.originalCoverage == .complete, map.topologyVerified, map.initialStartID != nil, map.startEvidence == .userConfirmed,
+              !map.nodes.contains(where: { $0.originalKind == .unknown || !$0.identityEvidence.confirmed || $0.originalKind == .unknownMystery && $0.progress == .completed }),
               map.edges.allSatisfy({$0.state != .inferred}) else { result.propagationStatus = .skippedIncompleteCoverage; return result }
         guard rules.order.allSatisfy({ rules.rule($0,floor:map.floor)?.provenance.status.strong == true && rules.rule($0,floor:map.floor)?.count != nil }) else { result.propagationStatus = .skippedUnverifiedRules; return result }
         let independent=result.candidates, counts=knownCounts(map)
@@ -104,18 +104,18 @@ extension PredictionEngine {
         let feasible=QuotaFlow.isFeasible(domains:domains,quotas:quotas,knownCounts:counts,control:control)
         if feasible == .impossible { result.propagationStatus = .conflict; result.warnings.append("全图配额冲突，保留独立筛选结果"); return result }
         if feasible == .interrupted { result.propagationStatus=control.cancelled ? .cancelled : .incomplete; return result }
-        var reduced=independent
+        var reduced=independent,globalExclusions=result.exclusions
         for node in independent.keys.sorted() {
             var kept: [NodeKind]=[]
             for kind in independent[node]! {
                 var fixed=domains; fixed[node]=[kind]
                 let value=QuotaFlow.isFeasible(domains:fixed,quotas:quotas,knownCounts:counts,control:control)
                 if value == .interrupted { result.propagationStatus=control.cancelled ? .cancelled : .incomplete; return result }
-                if value == .possible { kept.append(kind) }
+                if value == .possible { kept.append(kind) } else {globalExclusions[node,default:[]].append(CandidateReason(kind:kind,explanation:"固定为该类型时全图配额不存在合法赋值（\(rules.version)）"))}
             }
             reduced[node]=kept
         }
-        result.candidates=reduced; result.propagationStatus = .complete
+        result.candidates=reduced; result.exclusions=globalExclusions; result.propagationStatus = .complete
         return result
     }
 }

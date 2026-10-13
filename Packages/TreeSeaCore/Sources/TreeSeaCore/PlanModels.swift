@@ -29,6 +29,7 @@ public struct PlannerState: Codable, Sendable, Equatable, Hashable {
 public struct MoveAction: Codable, Sendable, Equatable, Hashable {
     public var from: NodeID; public var to: NodeID; public var itemIndex: Int?; public var itemInstanceID: UUID?; public var itemType: String?
     public var cost: Int; public var minimumAPToStart: Int; public var gain: ItemEffects; public var costConfirmed: Bool
+    public var walkPath: [NodeID]
     public var isFlight: Bool { itemIndex != nil }
 }
 public struct ScoreProfile: Codable, Sendable, Equatable {

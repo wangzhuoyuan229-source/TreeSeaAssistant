@@ -43,3 +43,15 @@ struct CorridorClassifierTests {
         #expect(throws:ScreenshotError.self) {try classifier.classify([[0]])}
     }
 }
+struct CorridorThresholdTests {
+    @Test func bothSidesOfSourceThresholdAgree() throws {
+        let classifier=try CorridorClassifier()
+        for (alpha,expected,hasEdge):(Float,Double,Bool) in [(0.12044183164834976,2.2221877574920654,false),(0.12065807729959488,2.262197732925415,true)] {
+            let background:Float=0.3
+            var tensor=Array(repeating:(background-0.5)/0.25,count:3*40*160)
+            for (channel,color) in [Float(0.4),0.8,0.4].enumerated() {for col in 0..<160 {tensor[channel*40*160+20*160+col]=(background+alpha*(color-background)-0.5)/0.25}}
+            let score=try #require(try classifier.classify([tensor]).first)
+            #expect(abs(score.rawLogit-expected)<=1e-4);#expect(score.hasEdge==hasEdge)
+        }
+    }
+}

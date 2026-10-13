@@ -1,0 +1,65 @@
+{
+  "startedClientDate": "2026-10-13",
+  "verificationClientDate": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "overall": "incomplete: iOS build and device acceptance not completed",
+  "commands": [
+    {
+      "name": "core",
+      "command": [
+        "bash",
+        "scripts/test-core.sh"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".build-evidence/final-core.log",
+      "testsPassed": 38,
+      "suites": 19
+    },
+    {
+      "name": "support-recognition",
+      "command": [
+        "bash",
+        "scripts/test-support.sh"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".build-evidence/final-support-recognition.log",
+      "testsPassed": 24,
+      "suites": 13
+    },
+    {
+      "name": "project",
+      "command": [
+        "python3",
+        "scripts/validate-project.py"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".build-evidence/final-project.log"
+    },
+    {
+      "name": "ui-host-diagnostic",
+      "command": [
+        "python3",
+        "scripts/typecheck-ui-diagnostic.py"
+      ],
+      "exitCode": 0,
+      "status": "passed",
+      "log": ".build-evidence/final-ui-host-diagnostic.log"
+    },
+    {
+      "name": "ios",
+      "command": [
+        "bash",
+        "scripts/verify-ios.sh"
+      ],
+      "exitCode": 2,
+      "status": "blocked",
+      "log": ".build-evidence/final-ios.log"
+    }
+  ],
+  "hostTestsPassed": 62,
+  "deviceAcceptance": "not performed",
+  "realScreenshotAcceptance": "not performed"
+}

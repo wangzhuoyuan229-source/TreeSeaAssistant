@@ -29,8 +29,8 @@ struct NodeEditorView:View {
 }
 struct RoadEditorView:View {
     @Bindable var model:AppModel
-    @State private var from=0
-    @State private var to=1
+    @State private var from:Int=0
+    @State private var to:Int=1
     var body:some View {Form{
         Section("现有道路"){ForEach(Array(model.store.session.map.edges.enumerated()),id:\.offset){index,edge in HStack{Text("N\(edge.a) ↔ N\(edge.b)");Spacer();Picker("道路状态",selection:Binding(get:{edge.state},set:{state in var map=model.store.session.map;map.edges[index].state=state;map.topologyVerified=false;model.apply(.map(map))})){Text("已确认").tag(EdgeState.confirmed);Text("推断").tag(EdgeState.inferred);Text("不存在").tag(EdgeState.absent)}}}}
         Section("添加道路"){nodePicker("起点",selection:$from);nodePicker("终点",selection:$to);Button("添加已确认道路"){var map=model.store.session.map;let edge=MapEdge(from,to);if from != to && !map.edges.contains(where:{$0.a==edge.a && $0.b==edge.b}) {map.edges.append(edge);map.topologyVerified=false;model.apply(.map(map))}}}
@@ -40,8 +40,8 @@ struct RoadEditorView:View {
 }
 struct ManualMapView:View {
     @Bindable var model:AppModel
-    @State private var floor=1
-    @State private var templateID=""
+    @State private var floor:Int=1
+    @State private var templateID:String=""
     @Environment(\.dismiss) private var dismiss
     var body:some View {Form{
         Section("手动建立"){Picker("楼层",selection:$floor){ForEach(1...5,id:\.self){Text("第 \($0) 层").tag($0)}};Picker("模板",selection:$templateID){Text("空白网格").tag("");ForEach(model.catalog.templates.templates.filter{$0.map.floor==floor}){Text($0.id).tag($0.id)}};Text("模板为固定源码参照，节点身份和道路不视为实战确认。新建会话后请逐项核对。").font(.footnote)}
@@ -56,7 +56,7 @@ struct ManualMapView:View {
 }
 struct InventoryView:View {
     @Bindable var model:AppModel
-    @State private var adding=false
+    @State private var adding:Bool=false
     @State private var editing:ItemInstance?
     var body:some View {ScrollView{VStack(alignment:.leading,spacing:20){Text("加工品与资源").font(.largeTitle.weight(.light)).fontDesign(.serif)
         Text("希望：\(model.store.session.resources.hope.map(String.init) ?? "未记录") · 源石锭：\(model.store.session.resources.ingots.map(String.init) ?? "未记录")")
@@ -72,7 +72,7 @@ struct ItemEditorView:View {
     @State private var typeID:String
     @State private var charges:String
     @State private var effectsConfirmed:Bool
-    @State private var reviewed=false
+    @State private var reviewed:Bool=false
     @Environment(\.dismiss) private var dismiss
     init(model:AppModel,item:ItemInstance?){self.model=model;self.item=item;_typeID=State(initialValue:item?.typeID ?? "M03");_charges=State(initialValue:item.map{String($0.remainingCharges)} ?? "");_effectsConfirmed=State(initialValue:item?.confirmedEffects != nil)}
     private var spec:MovementSpec? {model.movements.spec(typeID)}

@@ -80,6 +80,7 @@ nonisolated public enum InventoryTextParser {
             var warning:String?
             if text.confidence<0.8 || charges == nil || charges!>100 || (digits?.count ?? 0)>1 && !(digits?[1].isEmpty ?? true) && Int(digits![1]) != spec.initialCharges {charges=nil;warning="剩余次数缺失或有歧义，请人工确认"}
             var entry=InventoryEntry(typeID:spec.id,remainingCharges:charges,effects:nil);entry.warning=warning
+            entry.observationKey="slot-\(spec.id)-\(Int((text.center.x/32).rounded()))-\(Int((text.center.y/32).rounded()))"+(text.center.x==0 && text.center.y==0 ? "-line-\(index)" : "")
             entries.append(entry)
         }
         return InventoryProposal(digest:digest,coverage:coverage,entries:entries,warnings:entries.isEmpty ? ["未识别到名称，请手动添加；图标不替代次数确认"] : ["目录次数不会填入库存；增益需核对详情"])

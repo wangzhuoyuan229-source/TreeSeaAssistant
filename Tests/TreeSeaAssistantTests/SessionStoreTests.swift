@@ -61,3 +61,54 @@ func sampleSession() throws -> MapSession {
         #expect(!store.acceptPlan(result));store.undo();#expect(store.session.resources.actionPoints==3);#expect(store.session.map.nodes[1].originalKind == .unknownMystery)
     }
 }
+@MainActor struct ReviewRegressionTests {
+    @Test func partialCropPreservesUnseenNodesAndCompletedOriginalIdentity() throws {
+        var session=try sampleSession();session.map.nodes[1].originalKind = .secretShop;session.map.nodes[1].observedKind = .empty;session.map.nodes[1].progress = .completed;session.map.nodes[1].rewardClaimed=true;session.map.nodes[1].confirmedAPGain=1
+        let store=SessionStore(session:session)
+        var crop=session.map;crop.originalCoverage = .partial;crop.nodes.removeAll{$0.id==1};crop.edges=[]
+        var proposal=RecognitionProposal(map:crop);proposal.confirmed=true
+        try store.commit(proposal,expected:store.session.stamp)
+        #expect(store.session.map.nodes.count==3);#expect(store.session.map.edges.count==2);#expect(store.session.map.nodes.first{$0.id==1}?.originalKind == .secretShop)
+        var empty=session.map;empty.originalCoverage = .partial;empty.nodes[1]=MapNode(id:1,row:0,column:1,kind:.empty)
+        proposal=RecognitionProposal(map:empty);proposal.confirmed=true
+        try store.commit(proposal,expected:store.session.stamp)
+        let node=try #require(store.session.map.node(1));#expect(node.originalKind == .secretShop);#expect(node.progress == .completed);#expect(node.rewardClaimed);#expect(node.confirmedAPGain==1)
+    }
+    @Test func partialInventoryDoesNotEraseConfirmedEffects() throws {
+        var session=try sampleSession();let item=ItemInstance(typeID:"M12",remainingCharges:1,confirmedEffects:ItemEffects(ap:3));session.resources.items=[item]
+        let store=SessionStore(session:session);var entry=InventoryEntry(typeID:"M12",remainingCharges:0);entry.existingID=item.id;entry.confirmed=true
+        try store.commitInventory(InventoryProposal(digest:"partial",entries:[entry]),expected:store.session.stamp)
+        #expect(store.session.resources.items[0].confirmedEffects?.ap==3)
+        entry.clearEffectsConfirmed=true
+        try store.commitInventory(InventoryProposal(digest:"explicit-clear",entries:[entry]),expected:store.session.stamp)
+        #expect(store.session.resources.items[0].confirmedEffects==nil)
+    }
+    @Test func sameImageCanConfirmDifferentItemsButCannotDuplicateSameObservation() throws {
+        let store=SessionStore(session:try sampleSession());var a=InventoryEntry(typeID:"M12",remainingCharges:1),b=InventoryEntry(typeID:"M03",remainingCharges:2)
+        a.confirmed=true;a.newInstanceConfirmed=true;b.confirmed=true;b.newInstanceConfirmed=true
+        let first=InventoryProposal(digest:"same-image",entries:[a]),second=InventoryProposal(digest:"same-image",entries:[b])
+        try store.commitInventory(first,expected:store.session.stamp);try store.commitInventory(second,expected:store.session.stamp)
+        #expect(store.session.resources.items.count==2)
+        try store.commitInventory(first,expected:store.session.stamp);#expect(store.session.resources.items.count==2)
+    }
+    @Test func incompleteFullReplacementRejectedAtomically() throws {
+        var session=try sampleSession();session.resources.items=[ItemInstance(typeID:"M12",remainingCharges:1),ItemInstance(typeID:"M03",remainingCharges:3)]
+        let store=SessionStore(session:session);var a=InventoryEntry(typeID:"M12",remainingCharges:0);a.confirmed=true;a.existingID=session.resources.items[0].id
+        var filtered=InventoryProposal(digest:"complete-filtered",coverage:.complete,entries:[a]);filtered.observedEntryCount=2
+        #expect(throws:SessionError.self){try store.commitInventory(filtered,expected:store.session.stamp,replaceAll:true)}
+        let b=InventoryEntry(typeID:"M03",remainingCharges:nil)
+        #expect(throws:SessionError.self){try store.commitInventory(InventoryProposal(digest:"complete",coverage:.complete,entries:[a,b]),expected:store.session.stamp,replaceAll:true)}
+        #expect(store.session.resources.items==session.resources.items)
+    }
+}
+@MainActor struct LastValidRouteTests {
+    @Test func unresolvedAttemptPreservesLastValidRoute() throws {
+        let store=SessionStore(session:try sampleSession()),movements=try CatalogLoader.bundledMovements(),rules=try CatalogLoader.bundled().rules
+        var p=PredictionEngine.localCandidates(map:store.session.map,rules:rules);#expect(store.acceptPrediction(p))
+        var snap=PlanningSnapshot(map:store.session.map,resources:store.session.resources,prediction:p,movements:movements)
+        let valid=RoutePlanner.plan(PlanRequest(snapshot:snap));#expect(valid.status == .feasible);#expect(store.acceptPlan(valid))
+        p.predictionID=UUID();#expect(store.acceptPrediction(p));snap.prediction=p
+        var limited=RouteSetResult(snapshot:snap,profile:ScoreProfile(),status:.unresolved);limited.budgetLimited=true
+        #expect(store.acceptPlan(limited));#expect(store.session.routes?.recommendations==valid.recommendations);#expect(store.session.routes?.status == .feasible);#expect(store.session.latestPlanningFailure?.status == .unresolved)
+    }
+}
