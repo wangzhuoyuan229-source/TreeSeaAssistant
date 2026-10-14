@@ -3,6 +3,7 @@ import CoreGraphics
 import ImageIO
 import UniformTypeIdentifiers
 import Testing
+import TreeSeaCore
 #if SWIFT_PACKAGE
 @testable import TreeSeaRecognition
 #else
@@ -15,6 +16,14 @@ func syntheticPNG(width:Int,height:Int,orientation:Int = 1) throws -> Data {
     CGImageDestinationAddImage(destination,image,[kCGImagePropertyOrientation:orientation] as CFDictionary);#expect(CGImageDestinationFinalize(destination));return data as Data
 }
 struct ImagePreprocessorTests {
+    @Test func screenshotBattleLabelUsesGameWording() throws {
+        let prepared=try ImagePreprocessor.prepare(syntheticPNG(width:400,height:300),crop:nil)
+        let image=try ImagePreprocessor.image(prepared)
+        let labels=[RecognizedText(text:"作战",center:.init(x:100,y:160)),RecognizedText(text:"紧急作战",center:.init(x:250,y:160))]
+        let centers=try NodeCenterDetector.detect(in:prepared,texts:labels,image:image)
+        #expect(centers.contains{$0.kind == .battle})
+        #expect(centers.contains{$0.kind == .emergencyBattle})
+    }
     @Test func rejectsOversizeAndBadImage() {
         #expect(throws:ScreenshotError.self) {try ImagePreprocessor.prepare(Data(repeating:0,count:20*1024*1024+1),crop:nil)}
         #expect(throws:ScreenshotError.self) {try ImagePreprocessor.prepare(Data("invalid".utf8),crop:nil)}

@@ -1,0 +1,18 @@
+{
+  "reference": "docs/ui-previews/redesign-2026-10-14/map-proportion-reference.png",
+  "sha256": "e22294af9c0a6e966830ac736a867699a49918b74b1928b354c1a1e8d5fd6bb1",
+  "referenceSize": [
+    1490,
+    894
+  ],
+  "gridSpacing": 220,
+  "firstAnchor": [
+    236,
+    186
+  ],
+  "normalIconCanvas": 128,
+  "labelFont": 26,
+  "labelCenterOffset": 64,
+  "roadBodyWidth": 5,
+  "scaling": "one scene scale for icons, labels, roads, positions and hit regions; no automatic route overlay"
+}

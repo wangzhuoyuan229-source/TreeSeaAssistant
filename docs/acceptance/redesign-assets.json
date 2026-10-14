@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-14",
+  "assets": [
+    {
+      "path": "自建素材/backgrounds/blackstream-atlas-cover-v4.png",
+      "sha256": "22d1eb9c79ef812c811b89b6d982097c2ca049b4578db56e19fd178f503f932d",
+      "origin": "built-in image_gen"
+    },
+    {
+      "path": "自建素材/branding/wayfinder-icon-v2.png",
+      "sha256": "805314901442efa43b67410f39d6911190d7fa847f86d2e0138320bb980da634",
+      "origin": "built-in image_gen"
+    },
+    {
+      "path": "自建素材/branding/start-traveler-v2.svg",
+      "sha256": "b5a8047eb25372471f741563bb96813a1350d765f05a90a2d7c6f7a13ade4b70",
+      "origin": "lubiao StartMarker SVG silhouette transcribed to transparent standalone SVG"
+    }
+  ],
+  "reference": "https://www.lubiao.wiki/tools/blackstream-route",
+  "startMarker": "Uses transparent vector silhouette and source sprite components; opaque nodes/start.png is no longer rendered.",
+  "mapBackgrounds": "Original floor area-1...5 from existing manifest, downsample only.",
+  "prompts": {
+    "cover": "Wide 16:9 natural history engraving and layered screen print: ivory skeletal deer on right, tiny traveler and silver river forks, midnight teal woods, cobalt/violet ink, antique brass celestial routes, tactile paper, negative space left for title; no text, logos, UI or borders.",
+    "icon": "Square full bleed iOS icon: ivory branching antler river fork, antique brass compass seed, broken pale teal route circle with three nodes, midnight teal field, engraved screen print, strong silhouette, no text or mockup."
+  }
+}

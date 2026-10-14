@@ -2,7 +2,7 @@ import SwiftUI
 import TreeSeaCore
 struct CandidateDetailView:View {
     @Bindable var model:AppModel;var nodeID:NodeID
-    var body:some View {InkPanel{VStack(alignment:.leading,spacing:12){Text("可能类型").font(.title3)
+    var body:some View {InkPanel{VStack(alignment:.leading,spacing:12){Text("可能类型").font(.title3);Text("概率统计：待导入统计数据后启用").font(.footnote)
         if let node=model.store.session.map.node(nodeID),node.originalKind == .unknownFerocity {StatusLabel(text:"待揭示：未知凶戾不生成类型候选",warning:true)}
         else if let result=model.store.session.prediction,model.store.session.predictionIsCurrent,let candidates=result.candidates[nodeID]{
             Text(candidates.count==1 ? "按当前规则唯一 · 身份仍未揭示":"候选顺序不代表出现倾向").font(.subheadline)
@@ -20,12 +20,12 @@ struct PlanRequestView:View {
     @Bindable var model:AppModel
     @FocusState private var editingAP:Bool
     var body:some View {ScrollView{VStack(alignment:.leading,spacing:20){
-        InkPanel{VStack(alignment:.leading,spacing:16){Text("规划条件").font(.title2).fontDesign(.serif);TextField("当前行动力",text:$model.apDraft).keyboardType(.numberPad).focused($editingAP).textFieldStyle(.roundedBorder);ActionCapsule(title:"确认 AP 并重新规划",symbol:"checkmark",disabled:Int(model.apDraft)==nil){if let ap=Int(model.apDraft){editingAP=false;model.apply(.actionPoints(ap))}};Text("必经 \(model.store.session.mustPass.count)/8 · 按实际经过 / 飞行落点判断");ForEach(model.store.session.mustPass.sorted(),id:\.self){Text("N\($0) 必须经过")};Text("请在地图或节点列表中选择必经节点。未知及已完成节点均可选。").font(.footnote)}}
+        InkPanel{VStack(alignment:.leading,spacing:16){Text("规划条件").font(.title2).fontDesign(.serif);TextField("当前行动力",text:$model.apDraft).keyboardType(.numberPad).focused($editingAP).textFieldStyle(.roundedBorder);ActionCapsule(title:"确认 AP 并重新规划",symbol:"checkmark",disabled:Int(model.apDraft)==nil){if let ap=Int(model.apDraft){editingAP=false;model.apply(.actionPoints(ap))}};Text("已确认 AP：\(model.store.session.resources.actionPoints)").font(.footnote).monospacedDigit();Text("必经 \(model.store.session.mustPass.count)/8 · 按实际经过 / 飞行落点判断");ForEach(model.store.session.mustPass.sorted(),id:\.self){Text("N\($0) 必须经过")};Text("请在地图或节点列表中选择必经节点。未知及已完成节点均可选。").font(.footnote)}}
         NavigationLink("编辑道路 / 出生点覆盖",value:AppPage.roads).buttonStyle(.bordered).frame(minHeight:44)
         NavigationLink("加工品与次数",value:AppPage.inventory).buttonStyle(.bordered).frame(minHeight:44)
         ActionCapsule(title:model.store.isComputing ? "取消计算":"重新计算",symbol:model.store.isComputing ? "xmark":"arrow.clockwise"){if model.store.isComputing{model.cancel()}else{model.recompute()}}
         RouteComparisonView(model:model)
-    }.padding(20)}.navigationTitle("规划与路线").toolbar{ToolbarItemGroup(placement:.keyboard){Spacer();Button("完成"){editingAP=false}}}}
+    }.padding(20)}.navigationTitle("规划与路线").toolbar{ToolbarItemGroup(placement:.keyboard){if editingAP {Spacer();Button("完成"){editingAP=false}.accessibilityIdentifier("ap-keyboard-done")}}}}
 }
 struct RouteComparisonView:View {
     @Bindable var model:AppModel

@@ -35,7 +35,7 @@ struct ScreenshotImportView:View {
         ActionCapsule(title:"从文件导入 PNG / JPEG / WebP",symbol:"folder"){showFiles=true}
         if let prepared,let image=UIImage(data:prepared.png){Image(uiImage:image).resizable().scaledToFit().frame(maxHeight:420).accessibilityLabel("待导入的原图预览");Text("工作图 \(prepared.width) × \(prepared.height) · 本地处理").font(.footnote)}
         if data != nil {
-            InkPanel{VStack(alignment:.leading){Text("裁剪区域").font(.headline);cropSlider("左",value:$left);cropSlider("右",value:$right);cropSlider("上",value:$top);cropSlider("下",value:$bottom);ActionCapsule(title:"应用裁剪",symbol:"crop",disabled:busy){crop()}}}
+            InkPanel{VStack(alignment:.leading){DisclosureGroup("裁剪区域（可选）"){Text("尽量保留整张地图；裁掉底部资源栏和顶部界面文字。").font(.footnote).foregroundStyle(ThemeTokens.textSecondary.color);cropSlider("左",value:$left);cropSlider("右",value:$right);cropSlider("上",value:$top);cropSlider("下",value:$bottom);ActionCapsule(title:"应用裁剪",symbol:"crop",disabled:busy){crop()}}}}
             if purpose == .map {Picker("确认楼层",selection:$floor){ForEach(1...5,id:\.self){Text("第 \($0) 层").tag($0)}}}
             if purpose == .movePreview {previewSelectors}
             ActionCapsule(title:busy ? "正在识别":"生成识别提案",symbol:"viewfinder",disabled:busy || prepared==nil){recognize()}
@@ -44,7 +44,7 @@ struct ScreenshotImportView:View {
         if let issue {StatusLabel(text:issue,warning:true)}
         if purpose == .map {
             ForEach(mapProposal?.warnings ?? [],id:\.self){StatusLabel(text:$0,warning:true)}
-            if let map=mapProposal?.map {DraftMapReview(map:Binding(get:{mapProposal?.map ?? map},set:{mapProposal?.map=$0}),corrections:Binding(get:{mapProposal?.originalIdentityCorrections ?? []},set:{mapProposal?.originalIdentityCorrections=$0}))}
+            if let map=mapProposal?.map {Text("识别到 \(map.nodes.count) 个节点、\(map.edges.count) 条候选道路，请逐项核对。").font(.headline);DraftMapReview(map:Binding(get:{mapProposal?.map ?? map},set:{mapProposal?.map=$0}),corrections:Binding(get:{mapProposal?.originalIdentityCorrections ?? []},set:{mapProposal?.originalIdentityCorrections=$0}))}
             Picker("人工模板保底",selection:$manualTemplate){Text("选择模板").tag("");ForEach(model.catalog.templates.templates.filter{$0.map.floor==floor}){Text($0.id).tag($0.id)}}
             Button("采用模板作为人工提案"){if let template=model.catalog.templates.templates.first(where:{$0.id==manualTemplate}){mapProposal=RecognitionProposal(map:template.map,warnings:["人工选择的完整模板，必须核对实际截图；不会自动确认节点身份或道路"]);reviewed=false}}.buttonStyle(.bordered).disabled(manualTemplate.isEmpty)
             if mapProposal?.map != nil {TextField("截图中的当前 AP",text:$apText).keyboardType(.numberPad).textFieldStyle(.roundedBorder);Toggle("已核对 AP、节点、出生点、出口及每条道路",isOn:$reviewed);ActionCapsule(title:"确认并提交地图",symbol:"checkmark",disabled:!reviewed || Int(apText)==nil){commitMap()}}
@@ -54,6 +54,14 @@ struct ScreenshotImportView:View {
     }.padding(20).frame(maxWidth:1000)}.navigationTitle(purpose.title).toolbar{ToolbarItem(placement:.cancellationAction){Button("取消"){task?.cancel();dismiss()}}}.fileImporter(isPresented:$showFiles,allowedContentTypes:[.png,.jpeg,.webP]){result in
         do {let url=try result.get();let access=url.startAccessingSecurityScopedResource();defer{if access{url.stopAccessingSecurityScopedResource()}};let attributes=try FileManager.default.attributesOfItem(atPath:url.path);guard ((attributes[.size] as? NSNumber)?.intValue ?? Int.max) <= 20*1024*1024 else {issue="图片超过 20 MiB，请先裁剪。";return};load(try Data(contentsOf:url,options:.mappedIfSafe))}catch{issue="未能读取这张图片，当前会话已保留。"}
     }.onChange(of:photo){_,selection in guard let selection else{return};task?.cancel();let id=UUID();loadID=id;busy=true;task=Task{do{guard let bytes=try await selection.loadTransferable(type:Data.self),!Task.isCancelled,loadID==id else{return};load(bytes)}catch{issue="照片加载失败，当前会话已保留。";busy=false}}}
+    }.background(AppBackdrop()).scrollContentBackground(.hidden)
+    .task {
+        #if DEBUG
+        if purpose == .map,ProcessInfo.processInfo.arguments.contains("--ui-import-map") {
+            let url=Bundle.main.url(forResource:"recognition-reference",withExtension:"png")
+            if let url,let bytes=try? Data(contentsOf:url) {load(bytes)} else {issue="验收图片未准备"}
+        }
+        #endif
     }.onChange(of:floor){_,_ in loadID=UUID();task?.cancel();busy=false;mapProposal=nil;manualTemplate="";reviewed=false}.onDisappear{loadID=UUID();task?.cancel()}}
     private func cropSlider(_ name:String,value:Binding<Double>) -> some View {HStack{Text(name).frame(width:28);Slider(value:value,in:0...1).accessibilityLabel("裁剪\(name)边界")}}
     private var previewSelectors:some View {VStack{Picker("移动起点",selection:$from){Text("请选择").tag(Int?.none);ForEach(model.store.session.map.nodes){Text("N\($0.id)").tag(Optional($0.id))}};Picker("实际目标",selection:$target){Text("请选择").tag(Int?.none);ForEach(model.store.session.map.nodes){Text("N\($0.id)").tag(Optional($0.id))}};Picker("移动方式",selection:$itemID){Text("徒步").tag(UUID?.none);ForEach(model.store.session.resources.items){Text("\(model.movements.spec($0.typeID)?.name ?? $0.typeID) · \($0.id.uuidString.prefix(4))").tag(Optional($0.id))}}}}

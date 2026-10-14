@@ -15,8 +15,18 @@
 
 宿主 SwiftUI 类型诊断另外发现并修复 catch 中的 error 遮蔽（改为 self.error）和裁剪四个属性共用一个 State wrapper（改为四个 State）。诊断使用已有 State wrapper 别名绕开 CLT 缺 SwiftUIMacros，并替换 UIKit/键盘/Size Class 平台 API，因此不能当 iOS 构建通过。实际诊断通过，来源与转换见 scripts/typecheck-ui-diagnostic.py。
 
-未执行二次审查；后续以回归测试与整套运行记录验证。本轮没有以注释、禁用测试或降低断言掩盖失败。
+早期阶段未执行二次审查；后续复核记录见下。本轮没有以注释、禁用测试或降低断言掩盖失败。
 
 补充回归：预算未求得保留最近有效路线，并单独记录当前失败状态（unresolvedAttemptPreservesLastValidRoute，失败后通过）；全局剔除附排除原因、未确认类别不强排除；60ms 安全阶段到期仍继续搜索、结果收尾检查总截止时间。
 
 会话恢复补充：损坏文件与有效文件并存时，保留原坏文件、返回有效会话并单独报告损坏数量，避免损坏记录使列表与后续保存反复失败（corruptSessionDoesNotHideOtherValidSessions，失败后通过）。
+
+## 2026-10-14 设备交付复核
+
+独立只读复核发现 P2：项目重新生成会丢失六个 target 配置的 DEVELOPMENT_TEAM。生成器现按稳定 PBX ID 保留现有团队设置，不在脚本写入个人团队值。拦截 write_text 后生成并解析 PBX，比较原六个配置团队值、检查 Embed Frameworks，且断言源项目字节未变，验证通过（.build-evidence/generator-signing-verification.log）。
+
+动态产品、框架签名嵌入与 runpath、键盘完成按钮及补强的 AP/库存 UI 断言已复核；设备与模拟器实际测试结果以 verification.json 为准。
+
+## 2026-10-14 新版独立复核
+
+复核发现 Debug 识别 UI 依赖的参考图未入工程资源（P2），真实 UI 测试红灯复现后，生成器加入资源引用并在 Release 排除。实际签名 Release 包已检查不含参考图或已撤回的统计数据；失败日志保留。第二次只读复核未发现新增 P1/P2：统一场景比例、显式路线叠加、焦点限定的键盘完成按钮、概率纯接口、未来数据库未确认提案及楼层/取消边界均已核对。

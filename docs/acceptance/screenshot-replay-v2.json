@@ -1,0 +1,108 @@
+{
+  "status": "passed",
+  "command": "scripts/test-recognition-replay.sh",
+  "testCount": 33,
+  "suiteCount": 16,
+  "productionThresholds": {
+    "gridResidual": 0.12,
+    "corridorRawLogit": 2.2421875
+  },
+  "regressions": [
+    "full maps accepted with exact independently annotated occupied cells and roads",
+    "partial crop rejected",
+    "HUD-only crop rejected",
+    "wrong floor rejected",
+    "text grid without discs rejected",
+    "unconfirmed identity and roads remain unconfirmed",
+    "only direct observed exits prefilled"
+  ],
+  "results": [
+    {
+      "file": "user-floor1.png",
+      "nodes": 12,
+      "edges": 13,
+      "templateID": "floor-1-horizontal-fork",
+      "exitIDs": [
+        4,
+        14
+      ],
+      "residual": 3.3917873657517345e-16
+    },
+    {
+      "file": "floor1-template01-normal-001.png",
+      "nodes": 12,
+      "edges": 13,
+      "templateID": "floor-1-horizontal-fork",
+      "exitIDs": [
+        14
+      ],
+      "residual": 2.5639502485114184e-16
+    },
+    {
+      "file": "floor2-template03-normal-001.png",
+      "nodes": 19,
+      "edges": 20,
+      "templateID": "floor-2-04",
+      "exitIDs": [
+        9
+      ],
+      "residual": 0.019989855086629753
+    },
+    {
+      "file": "floor3-template01-op7-001.png",
+      "nodes": 31,
+      "edges": 34,
+      "templateID": "floor-3-02",
+      "exitIDs": [],
+      "residual": 0.01539279552179156
+    },
+    {
+      "file": "floor4-template03-normal-001.png",
+      "nodes": 32,
+      "edges": 35,
+      "templateID": "floor-4-05",
+      "exitIDs": [],
+      "residual": 0.019855431114048167
+    },
+    {
+      "file": "floor5-template01-normal-001.png",
+      "nodes": 42,
+      "edges": 44,
+      "templateID": "floor-5-02",
+      "exitIDs": [],
+      "residual": 0.0066317926022152855
+    }
+  ],
+  "evidence": {
+    "red": "red.log",
+    "roadsRed": "roads-red.log",
+    "positionRed": "positions-red.log",
+    "textAndExitRed": "final-red.log",
+    "green": "support.log",
+    "positionsAndMaps": "replay-final.json",
+    "corridorCoordinateComparison": "corridors.json",
+    "fixtures": "fixtures.json"
+  },
+  "limitations": [
+    "requires repeated readable node labels and at least two observable small node rims",
+    "heavy occlusion and overcropping intentionally return no map",
+    "six fixtures are a regression corpus, not an accuracy benchmark",
+    "pixel coordinate tolerance independently checked on three user-reference centers only; remaining positions recorded for review",
+    "iOS simulator and device acceptance delegated to parent agent"
+  ],
+  "evidenceRoot": ".build-evidence/recognition-fix",
+  "sourceManifest": ".build-evidence/recognition-fix/fixtures.json",
+  "scope": "six real image regression fixtures; not a general recognition accuracy benchmark",
+  "initialVerifiedImplementationHashes": {
+    "TreeSeaAssistant/Recognition/ScreenshotRecognizer.swift": "5fec86e583ad5243ad15850d3ac3f4693521e4fc63fbeb818a5b2e0e55620c8b",
+    "Tests/TreeSeaAssistantTests/ScreenshotReplayTests.swift": "8e5beca7840cc989df8018202838ceff03076f343480505ba3a37159148543d1",
+    "scripts/test-recognition-replay.sh": "18d3d77b9537508f05e7c163da0c7c31477a824be7f45540dde4538851176883"
+  },
+  "latestLog": ".build-evidence/proportion-database-support-final.log",
+  "databaseExtension": ".build-evidence/recognition-fix/database-extension.json",
+  "currentFilesSHA256": {
+    "TreeSeaAssistant/Recognition/ScreenshotRecognizer.swift": "d000f256a6f4a9b1a6b2c93e2036eddaca2d8fb0801c1beec080335a6f5bb026",
+    "Tests/TreeSeaAssistantTests/ScreenshotReplayTests.swift": "867c77b7af73f75c468f3e451a43eb39593c214a61d8d9e350c694197ebdc102",
+    "scripts/test-recognition-replay.sh": "18d3d77b9537508f05e7c163da0c7c31477a824be7f45540dde4538851176883"
+  }
+}

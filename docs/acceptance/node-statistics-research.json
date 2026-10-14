@@ -1,0 +1,267 @@
+{
+  "sources": [
+    {
+      "url": "https://www.lubiao.wiki/_nuxt/BEBcYM_M.js",
+      "sha256": "530473c32956008cf6667b2e248aae19071fd72f3433d0a841328d49ff986e6e",
+      "bytes": 114546,
+      "use": "ks exact raw node type/floor/distance counts; zr/Un type-specific denominator; explicit UI disclaimer"
+    },
+    {
+      "url": "https://www.lubiao.wiki/_nuxt/DO7eM7xI.js",
+      "sha256": "2b8001033dce6c143ebbf5220d9ab796e896974d390e0eba5f8de608b590fe45",
+      "bytes": 40469,
+      "use": "z source distance shortcut; hn equal candidate weights rejected as unverified priors"
+    },
+    {
+      "url": "https://www.lubiao.wiki/submit",
+      "assetURL": "https://www.lubiao.wiki/_nuxt/BPj4sh2g.js",
+      "sha256": "7cf13713b028d6449d896ddf5047c3efa8f46f56385d1e2f49192fdb0235717b",
+      "use": "general collection methods only; no ks-specific complete sample-frame evidence"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata/excel/roguelike_topic_table.json",
+      "sha256": "36d8189e1e466fa07226effbf2cf224a69fb41a942ae83827934052e7a01cc69",
+      "bytes": 17958101,
+      "latestCommitAtResearch": "17759cc8cdf37388414145d16262a3a06f3ab25e",
+      "latestCommitDate": "2026-10-08T23:46:48Z",
+      "use": "nodeTypeData/rollNodeData/gridZone examined; no ordinary node-generation weight found"
+    }
+  ],
+  "semantic": "P(distance | node type, floor), not P(node type | distance)",
+  "knownSampleCounts": {
+    "floorIStart": 4269,
+    "floorIIStart": 4315,
+    "floorIIIStart": 4167,
+    "floorIVStart": 3859,
+    "floorIVRemembranceStart": 244,
+    "floorVStart": 3676,
+    "otherCountRuleStudy": 19074
+  },
+  "limitations": [
+    "not game generation probability",
+    "full per-map sampling frame unavailable; no cross-type normalization",
+    "game-version/difficulty and unlock split absent in source frequency data",
+    "normal I-V UI only; remembrance data preserved and separately queryable in core",
+    "source joins danger-end neighbours; mismatching generic-exit graphs withheld",
+    "no user data uploaded",
+    "Published distance histogram is research evidence only; it is not bundled with or read by the app."
+  ],
+  "weightFieldAudit": [
+    [
+      "details.rogue_6.monthMission[0].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[1].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[2].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[3].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[4].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[5].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[6].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[7].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[8].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[9].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[10].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[11].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[12].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[13].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[14].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[15].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[16].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[17].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[18].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[19].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[20].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[21].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[22].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[23].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[24].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[25].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[26].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[27].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.monthMission[28].innerClassWeight",
+      "10"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[0].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[1].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[2].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[3].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[4].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[5].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[6].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[7].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[8].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[9].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[10].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[11].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[12].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[13].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[14].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[15].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[16].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[17].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[18].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[19].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[20].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[21].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.battleLoadingTips[22].weight",
+      "50.0"
+    ],
+    [
+      "details.rogue_6.items.rogue_6_max_weight",
+      "{'id': 'rogue_6_max_weight', 'name': '零件箱容量', 'description': None, 'usage': '机制物品', 'obtai"
+    ]
+  ],
+  "implementation": "Reserved NodeProbabilityProvider protocol and versioned context/result types only. No provider implementation, imported dataset, histogram lookup, fallback weights, or displayed percentages.",
+  "productStatus": "awaiting future statistics import",
+  "userDecision": "节点概率统计功能先预留接口，未来导入数据后提供该功能服务",
+  "researchEvidenceDirectory": ".build-evidence/upstream/lubiao-node-statistics-20261014"
+}

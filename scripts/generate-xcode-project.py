@@ -1,11 +1,17 @@
 """Generate the repository's iOS-only project using deterministic PBX identifiers."""
 from pathlib import Path
-import hashlib, json
+import hashlib, json, subprocess
 root=Path(__file__).resolve().parents[1]; project=root/'TreeSeaAssistant.xcodeproj';project.mkdir(exist_ok=True)
+previousProject=project/'project.pbxproj'
+previousObjects=json.loads(subprocess.check_output(['plutil','-convert','json','-o','-',str(previousProject)]))['objects'] if previousProject.exists() else {}
 objects={}
 def uid(name):return hashlib.sha1(name.encode()).hexdigest()[:24].upper()
 def ref(name):return uid(name)
-def put(identity,isa,**fields):objects[uid(identity)]={'isa':isa,**fields};return uid(identity)
+def put(identity,isa,**fields):
+ if isa=='XCBuildConfiguration':
+  previousSettings=previousObjects.get(uid(identity),{}).get('buildSettings',{})
+  if 'DEVELOPMENT_TEAM' in previousSettings:fields['buildSettings']['DEVELOPMENT_TEAM']=previousSettings['DEVELOPMENT_TEAM']
+ objects[uid(identity)]={'isa':isa,**fields};return uid(identity)
 def buildfile(name,file,**extra):return put('build:'+name,'PBXBuildFile',fileRef=file,**extra)
 products=[];groups=[];sourceLists={}
 for target,folder in [('app','TreeSeaAssistant'),('unit','Tests/TreeSeaAssistantTests'),('ui','Tests/TreeSeaAssistantUITests')]:
@@ -14,7 +20,7 @@ for target,folder in [('app','TreeSeaAssistant'),('unit','Tests/TreeSeaAssistant
   name=str(p.relative_to(root));r=put('file:'+name,'PBXFileReference',lastKnownFileType='sourcecode.swift',path=name,sourceTree='SOURCE_ROOT');refs.append(r);builds.append(buildfile(name,r))
  groups.append(put('group:'+target,'PBXGroup',children=refs,name={'app':'App','unit':'Unit Tests','ui':'UI Tests'}[target],sourceTree='<group>'));sourceLists[target]=builds
 resources=[]
-for path,typ in [('TreeSeaAssistant/Assets.xcassets','folder.assetcatalog'),('TreeSeaAssistant/Resources/asset-index.json','text.json'),('TreeSeaAssistant/Models/corridor-runtime.json','text.json')]:
+for path,typ in [('TreeSeaAssistant/Assets.xcassets','folder.assetcatalog'),('TreeSeaAssistant/Resources/asset-index.json','text.json'),('TreeSeaAssistant/Models/corridor-runtime.json','text.json'),('TreeSeaAssistant/Resources/recognition-reference.png','image.png')]:
  r=put('file:'+path,'PBXFileReference',lastKnownFileType=typ,path=path,sourceTree='SOURCE_ROOT');resources.append(buildfile(path,r));groups.append(r)
 model='TreeSeaAssistant/Models/BlackFlowCorridor.mlpackage';r=put('file:'+model,'PBXFileReference',lastKnownFileType='folder.mlpackage',path=model,sourceTree='SOURCE_ROOT');groups.append(r);sourceLists['app'].append(buildfile(model,r))
 pkg=put('package','XCLocalSwiftPackageReference',relativePath='Packages/TreeSeaCore')
@@ -24,8 +30,9 @@ for key in ['app','unit']:
  configs=[]
  for mode in ['Debug','Release']:
   settings={'SWIFT_VERSION':'6.0','IPHONEOS_DEPLOYMENT_TARGET':'17.0','TARGETED_DEVICE_FAMILY':'1,2','SUPPORTED_PLATFORMS':'iphoneos iphonesimulator','SDKROOT':'iphoneos','GENERATE_INFOPLIST_FILE':'YES','PRODUCT_NAME':'$(TARGET_NAME)','CODE_SIGN_STYLE':'Automatic','SWIFT_STRICT_CONCURRENCY':'complete','SWIFT_OPTIMIZATION_LEVEL':'-Onone' if mode=='Debug' else '-O','SWIFT_ACTIVE_COMPILATION_CONDITIONS':'DEBUG' if mode=='Debug' else '', 'SUPPORTS_MACCATALYST':'NO','SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD':'NO'}
-  if key=='app':settings.update({'PRODUCT_BUNDLE_IDENTIFIER':'com.treesea.assistant','ASSETCATALOG_COMPILER_APPICON_NAME':'AppIcon','INFOPLIST_KEY_CFBundleDisplayName':'黑流树海','INFOPLIST_KEY_UILaunchScreen_Generation':'YES','INFOPLIST_KEY_UIApplicationSceneManifest_Generation':'YES','INFOPLIST_KEY_UISupportedInterfaceOrientations':'UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight','INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad':'UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight','MARKETING_VERSION':'0.1.0','CURRENT_PROJECT_VERSION':'1','SWIFT_DEFAULT_ACTOR_ISOLATION':'MainActor'})
-  else:settings.update({'PRODUCT_BUNDLE_IDENTIFIER':'com.treesea.assistant.tests','TEST_HOST':'$(BUILT_PRODUCTS_DIR)/TreeSeaAssistant.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TreeSeaAssistant','BUNDLE_LOADER':'$(TEST_HOST)'})
+  if key=='app':settings.update({'PRODUCT_BUNDLE_IDENTIFIER':'com.treesea.assistant','ASSETCATALOG_COMPILER_APPICON_NAME':'AppIcon','INFOPLIST_KEY_CFBundleDisplayName':'黑流树海','INFOPLIST_KEY_UILaunchScreen_Generation':'YES','INFOPLIST_KEY_UIApplicationSceneManifest_Generation':'YES','INFOPLIST_KEY_UISupportedInterfaceOrientations':'UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight','INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad':'UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight','MARKETING_VERSION':'0.2.0','CURRENT_PROJECT_VERSION':'2','SWIFT_DEFAULT_ACTOR_ISOLATION':'MainActor'})
+  if key=='app' and mode=='Release':settings['EXCLUDED_SOURCE_FILE_NAMES']='recognition-reference.png'
+  if key!='app':settings.update({'PRODUCT_BUNDLE_IDENTIFIER':'com.treesea.assistant.tests','TEST_HOST':'$(BUILT_PRODUCTS_DIR)/TreeSeaAssistant.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TreeSeaAssistant','BUNDLE_LOADER':'$(TEST_HOST)'})
   configs.append(put(f'config:{key}:{mode}','XCBuildConfiguration',name=mode,buildSettings=settings))
  put('configs:'+key,'XCConfigurationList',buildConfigurations=configs,defaultConfigurationIsVisible=0,defaultConfigurationName='Release')
 # UI configurations: hosted by app through TEST_TARGET_NAME, not TEST_HOST.
@@ -40,7 +47,10 @@ for key,name,kind in [('app','TreeSeaAssistant','application'),('unit','TreeSeaA
  if key in packageProducts:fs=[put('link:'+key,'PBXBuildFile',productRef=packageProducts[key])]
  frameworks=put('frameworks:'+key,'PBXFrameworksBuildPhase',buildActionMask=2147483647,files=fs,runOnlyForDeploymentPostprocessing=0)
  phases=[source,frameworks]
- if key=='app':phases.append(put('resources','PBXResourcesBuildPhase',buildActionMask=2147483647,files=resources,runOnlyForDeploymentPostprocessing=0))
+ if key=='app':
+  phases.append(put('resources','PBXResourcesBuildPhase',buildActionMask=2147483647,files=resources,runOnlyForDeploymentPostprocessing=0))
+  embed=put('embed:core','PBXBuildFile',productRef=packageProducts[key],settings={'ATTRIBUTES':['CodeSignOnCopy','RemoveHeadersOnCopy']})
+  phases.append(put('embed-frameworks','PBXCopyFilesBuildPhase',buildActionMask=2147483647,dstPath='',dstSubfolderSpec=10,files=[embed],name='Embed Frameworks',runOnlyForDeploymentPostprocessing=0))
  deps=[]
  if key!='app':
   proxy=put('proxy:'+key,'PBXContainerItemProxy',containerPortal=ref('project'),proxyType=1,remoteGlobalIDString=ref('target:app'),remoteInfo='TreeSeaAssistant')
@@ -49,7 +59,7 @@ for key,name,kind in [('app','TreeSeaAssistant','application'),('unit','TreeSeaA
 productGroup=put('products','PBXGroup',children=products,name='Products',sourceTree='<group>')
 main=put('main','PBXGroup',children=groups+[productGroup],sourceTree='<group>')
 projectConfigs=[]
-for mode in ['Debug','Release']:projectConfigs.append(put('projectconfig:'+mode,'XCBuildConfiguration',name=mode,buildSettings={'CLANG_ENABLE_MODULES':'YES','ENABLE_TESTABILITY':'YES' if mode=='Debug' else 'NO','SWIFT_VERSION':'6.0','IPHONEOS_DEPLOYMENT_TARGET':'17.0'}))
+for mode in ['Debug','Release']:projectConfigs.append(put('projectconfig:'+mode,'XCBuildConfiguration',name=mode,buildSettings={'CLANG_ENABLE_MODULES':'YES','LD_RUNPATH_SEARCH_PATHS':'$(inherited) @executable_path/Frameworks @loader_path/Frameworks','ONLY_ACTIVE_ARCH':'YES' if mode=='Debug' else 'NO','ENABLE_TESTABILITY':'YES' if mode=='Debug' else 'NO','SWIFT_VERSION':'6.0','IPHONEOS_DEPLOYMENT_TARGET':'17.0'}))
 put('projectconfigs','XCConfigurationList',buildConfigurations=projectConfigs,defaultConfigurationIsVisible=0,defaultConfigurationName='Release')
 put('project','PBXProject',attributes={'LastUpgradeCheck':'2600','BuildIndependentTargetsInParallel':'YES','TargetAttributes':{ref('target:unit'):{'TestTargetID':ref('target:app')},ref('target:ui'):{'TestTargetID':ref('target:app')}}},buildConfigurationList=ref('projectconfigs'),compatibilityVersion='Xcode 14.0',developmentRegion='zh-Hans',hasScannedForEncodings=0,knownRegions=['zh-Hans','en','Base'],mainGroup=main,productRefGroup=productGroup,projectDirPath='',projectRoot='',packageReferences=[pkg],targets=[ref('target:app'),ref('target:unit'),ref('target:ui')])
 def serialize(v):

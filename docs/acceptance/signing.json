@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-14",
+  "teamType": "Personal Team",
+  "certificateType": "Apple Development",
+  "usableIdentityCount": 1,
+  "privateKeyLocation": "local macOS Keychain; not exported",
+  "signingProbeExit": 0,
+  "verificationExit": 0,
+  "certificate": {
+    "notBefore": "Oct 14 00:17:27 2026 GMT",
+    "notAfter": "Oct 14 00:17:26 2027 GMT",
+    "sha256 Fingerprint": "BB:8E:07:67:18:98:D2:08:9A:C7:8E:07:C2:28:81:D5:15:D3:09:57:5F:31:F7:1B:97:03:2F:F3:C5:9B:9E:3C"
+  },
+  "iOSDevelopmentProfile": {
+    "status": "created and embedded",
+    "expiration": "2026-10-21T09:47:50",
+    "registeredDeviceCount": 2,
+    "applicationIdentifierSuffix": "com.treesea.assistant"
+  },
+  "signedAppVerificationExit": 0
+}

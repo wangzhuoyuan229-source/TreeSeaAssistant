@@ -2,8 +2,97 @@
   "startedClientDate": "2026-10-13",
   "verificationClientDate": "2026-10-14",
   "timezone": "Asia/Shanghai",
-  "overall": "incomplete: iOS build and device acceptance not completed",
+  "currentRevision": "0.2.0 (2)",
+  "overall": "current requested fixes verified; original full performance and manual accessibility acceptance remains incomplete",
   "commands": [
+    {
+      "name": "core",
+      "status": "passed",
+      "exitCode": 0,
+      "testsPassed": 38,
+      "suites": 19,
+      "log": ".build-evidence/node-probability-interface-core-regression.log"
+    },
+    {
+      "name": "support-and-real-replay",
+      "status": "passed",
+      "exitCode": 0,
+      "testsPassed": 33,
+      "suites": 16,
+      "log": ".build-evidence/proportion-database-support-final.log"
+    },
+    {
+      "name": "project",
+      "status": "passed",
+      "exitCode": 0,
+      "log": ".build-evidence/proportion-project-final.log"
+    },
+    {
+      "name": "proportion-iphone-device",
+      "status": "Passed",
+      "exitCode": 0,
+      "testsPassed": 35,
+      "testsSkipped": 2,
+      "testsFailed": 0,
+      "resultBundle": ".build-evidence/proportion-iphone-device.xcresult",
+      "log": ".build-evidence/proportion-iphone-device.log"
+    },
+    {
+      "name": "proportion-phone-simulator",
+      "status": "Passed",
+      "exitCode": 0,
+      "testsPassed": 35,
+      "testsSkipped": 2,
+      "testsFailed": 0,
+      "resultBundle": ".build-evidence/proportion-phone-simulator.xcresult",
+      "log": ".build-evidence/proportion-phone-simulator.log"
+    },
+    {
+      "name": "proportion-ipad-simulator",
+      "status": "Passed",
+      "exitCode": 0,
+      "testsPassed": 35,
+      "testsSkipped": 2,
+      "testsFailed": 0,
+      "resultBundle": ".build-evidence/proportion-ipad-simulator.xcresult",
+      "log": ".build-evidence/proportion-ipad-simulator.log"
+    },
+    {
+      "name": "proportion-ipad-device",
+      "status": "Passed",
+      "exitCode": 0,
+      "testsPassed": 35,
+      "testsSkipped": 2,
+      "testsFailed": 0,
+      "resultBundle": ".build-evidence/proportion-ipad-device.xcresult",
+      "log": ".build-evidence/proportion-ipad-device.log"
+    },
+    {
+      "name": "last-reference-visual-check",
+      "status": "passed",
+      "exitCode": 0,
+      "testsPassed": 1,
+      "resultBundle": ".build-evidence/proportion-iphone-visual-run2.xcresult",
+      "log": ".build-evidence/proportion-iphone-visual-run2.log"
+    },
+    {
+      "name": "signed-release",
+      "status": "passed",
+      "exitCode": 0,
+      "log": ".build-evidence/proportion-release-final.log",
+      "iphoneInstall": ".build-evidence/proportion-iphone-release-install.json",
+      "iphoneLaunch": ".build-evidence/proportion-iphone-release-launch.json",
+      "ipadInstall": ".build-evidence/proportion-ipad-release-install2.json",
+      "ipadLaunch": ".build-evidence/proportion-ipad-release-launch2.json"
+    }
+  ],
+  "hostTestsPassed": 71,
+  "testCountNote": "38 core + 33 support/replay unique host tests. Each iOS run: 31 support + 4 UI passed; two host-only real replay tests intentionally skipped on iOS and passed on Mac with six actual images.",
+  "realScreenshotAcceptance": "six real images passed independently annotated cell and road assertions; not a general accuracy benchmark",
+  "probability": "interface only; no provider, dataset, invented weights or percentages",
+  "recognitionDatabase": "optional provider interface reserved; default nil; no database installed; all proposals require manual confirmation",
+  "release": "signed Release 0.2.0 (2) installed, launched and running on both iPhone 17 Pro and iPad Pro 12.9-inch (6th generation)",
+  "historicalCommands": [
     {
       "name": "core",
       "command": [
@@ -12,7 +101,7 @@
       ],
       "exitCode": 0,
       "status": "passed",
-      "log": ".build-evidence/final-core.log",
+      "log": ".build-evidence/core-final-linkage.log",
       "testsPassed": 38,
       "suites": 19
     },
@@ -24,8 +113,8 @@
       ],
       "exitCode": 0,
       "status": "passed",
-      "log": ".build-evidence/final-support-recognition.log",
-      "testsPassed": 24,
+      "log": ".build-evidence/support-final-linkage.log",
+      "testsPassed": 25,
       "suites": 13
     },
     {
@@ -55,11 +144,81 @@
         "scripts/verify-ios.sh"
       ],
       "exitCode": 2,
-      "status": "blocked",
+      "status": "historical toolchain failure; superseded by iOS build and simulator runs",
       "log": ".build-evidence/final-ios.log"
+    },
+    {
+      "name": "iphone-simulator",
+      "status": "passed",
+      "exitCode": 0,
+      "testsPassed": 28,
+      "unitTests": 25,
+      "uiTests": 3,
+      "resultBundle": ".build-evidence/ios-phone-final.xcresult",
+      "log": ".build-evidence/ios-phone-final.log"
+    },
+    {
+      "name": "ipad-simulator",
+      "status": "passed",
+      "exitCode": 0,
+      "testsPassed": 28,
+      "unitTests": 25,
+      "uiTests": 3,
+      "resultBundle": ".build-evidence/ios-ipad-run7.xcresult",
+      "log": ".build-evidence/ios-ipad-run7.log"
+    },
+    {
+      "name": "physical-device-signed-build",
+      "status": "passed",
+      "exitCode": 0,
+      "log": ".build-evidence/ios-connected-device-build2.log"
+    },
+    {
+      "name": "physical-iphone",
+      "status": "passed",
+      "exitCode": 0,
+      "testsPassed": 28,
+      "unitTests": 25,
+      "uiTests": 3,
+      "resultBundle": ".build-evidence/ios-device-tests-run5.xcresult",
+      "log": ".build-evidence/ios-device-tests-run5.log"
+    },
+    {
+      "name": "physical-iphone-signed-release",
+      "status": "passed: strict signature, install, launch and running process verified",
+      "exitCode": 0,
+      "log": ".build-evidence/ios-signed-release-build.log",
+      "install": ".build-evidence/device-release-install.json",
+      "launch": ".build-evidence/device-release-launch.json",
+      "screenshot": ".build-evidence/iphone-release-running.png"
+    },
+    {
+      "name": "physical-ipad-run1",
+      "status": "blocked: developer certificate not trusted on iPad; no tests passed",
+      "exitCode": 65,
+      "log": ".build-evidence/ios-physical-ipad-run1.log",
+      "resultBundle": ".build-evidence/ios-physical-ipad-run1.xcresult"
+    },
+    {
+      "name": "physical-ipad",
+      "status": "passed",
+      "exitCode": 0,
+      "testsPassed": 28,
+      "unitTests": 25,
+      "uiTests": 3,
+      "resultBundle": ".build-evidence/ios-physical-ipad-run2.xcresult",
+      "log": ".build-evidence/ios-physical-ipad-run2.log"
+    },
+    {
+      "name": "physical-ipad-signed-release",
+      "status": "passed: strict signature, install, launch and running process verified",
+      "exitCode": 0,
+      "log": ".build-evidence/ipad-signed-release-build.log",
+      "install": ".build-evidence/ipad-release-install.json",
+      "launch": ".build-evidence/ipad-release-launch.json",
+      "processLog": ".build-evidence/ipad-release-processes.log",
+      "screenshot": ".build-evidence/ipad-release-running.png"
     }
   ],
-  "hostTestsPassed": 62,
-  "deviceAcceptance": "not performed",
-  "realScreenshotAcceptance": "not performed"
+  "releaseEvidence": "docs/acceptance/release-v02.json"
 }

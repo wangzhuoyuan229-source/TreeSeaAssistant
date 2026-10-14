@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-14",
+  "platform": "macOS 27.0.1 host; not iOS performance",
+  "sourceCommit": "b81965ba78918d8d6effb0e5006dc3c9b2e617c9",
+  "status": "historical initial replay rejected; fixed replay recorded in screenshot-replay-v2.json",
+  "redistribution": "screenshots retained only in ignored local research evidence",
+  "cases": [
+    {
+      "floor": 1,
+      "screenshot": {
+        "file": "floor1-template01-normal-001.png",
+        "sourceURL": "https://raw.githubusercontent.com/ega0123/hlsh-helper/b81965ba78918d8d6effb0e5006dc3c9b2e617c9/android/recognition-native/src/androidTest/assets/fixtures/three_frame/floor1-template01-normal-001/frame_1.png?download=1",
+        "sha256": "94b97a1684c07dfe2140692171cc0857e4ea277a3e144c91c09b2b1159b8cef1",
+        "bytes": 1855296,
+        "status": "public research screenshot; independent labels pending"
+      },
+      "elapsedSecondsIncludingTwoOCRPasses": 15.737806083401665,
+      "automaticMapProduced": false,
+      "warnings": [
+        "未形成可靠网格，请选择模板或手动建立地图"
+      ],
+      "independentVisualReview": "viewed screenshot; no complete independent node and road labels yet"
+    },
+    {
+      "floor": 2,
+      "screenshot": {
+        "file": "floor2-template03-normal-001.png",
+        "sourceURL": "https://raw.githubusercontent.com/ega0123/hlsh-helper/b81965ba78918d8d6effb0e5006dc3c9b2e617c9/android/recognition-native/src/androidTest/assets/fixtures/three_frame/floor2-template03-normal-001/frame_1.png?download=1",
+        "sha256": "e15e88b443165fc0b4a09dd1549bca686e3a6efdfc7b41d2ef84b5cf1523638e",
+        "bytes": 2744036,
+        "status": "public research screenshot; independent labels pending"
+      },
+      "elapsedSecondsIncludingTwoOCRPasses": 0.3630611249245703,
+      "automaticMapProduced": false,
+      "warnings": [
+        "未形成可靠网格，请选择模板或手动建立地图"
+      ],
+      "independentVisualReview": "viewed screenshot; no complete independent node and road labels yet"
+    },
+    {
+      "floor": 3,
+      "screenshot": {
+        "file": "floor3-template01-op7-001.png",
+        "sourceURL": "https://raw.githubusercontent.com/ega0123/hlsh-helper/b81965ba78918d8d6effb0e5006dc3c9b2e617c9/android/recognition-native/src/androidTest/assets/fixtures/three_frame/floor3-template01-op7-001/frame_1.png?download=1",
+        "sha256": "fde70b755c4c4a588f36a65bcc914840ad16645dd4dfd7b0dd48a1f513d5cc2c",
+        "bytes": 1278538,
+        "status": "public research screenshot; independent labels pending"
+      },
+      "elapsedSecondsIncludingTwoOCRPasses": 0.3973057916155085,
+      "automaticMapProduced": false,
+      "warnings": [
+        "未形成可靠网格，请选择模板或手动建立地图"
+      ],
+      "independentVisualReview": "viewed screenshot; no complete independent node and road labels yet"
+    },
+    {
+      "floor": 4,
+      "screenshot": {
+        "file": "floor4-template03-normal-001.png",
+        "sourceURL": "https://raw.githubusercontent.com/ega0123/hlsh-helper/b81965ba78918d8d6effb0e5006dc3c9b2e617c9/android/recognition-native/src/androidTest/assets/fixtures/three_frame/floor4-template03-normal-001/frame_1.png?download=1",
+        "sha256": "983f2b5ae62f37bc38718f4ea8c27d377e9e415436e1b8c4f62390eb87128975",
+        "bytes": 2144956,
+        "status": "public research screenshot; independent labels pending"
+      },
+      "elapsedSecondsIncludingTwoOCRPasses": 0.4134852917632088,
+      "automaticMapProduced": false,
+      "warnings": [
+        "未形成可靠网格，请选择模板或手动建立地图"
+      ],
+      "independentVisualReview": "viewed screenshot; no complete independent node and road labels yet"
+    },
+    {
+      "floor": 5,
+      "screenshot": {
+        "file": "floor5-template01-normal-001.png",
+        "sourceURL": "https://raw.githubusercontent.com/ega0123/hlsh-helper/b81965ba78918d8d6effb0e5006dc3c9b2e617c9/android/recognition-native/src/androidTest/assets/fixtures/three_frame/floor5-template01-normal-001/frame_1.png?download=1",
+        "sha256": "c77647bda74a59983bf3e0d9a04b615043541f0cb5dce824db6f3f9d9875c4ea",
+        "bytes": 2399269,
+        "status": "public research screenshot; independent labels pending"
+      },
+      "elapsedSecondsIncludingTwoOCRPasses": 0.4603202916914597,
+      "automaticMapProduced": false,
+      "warnings": [
+        "未形成可靠网格，请选择模板或手动建立地图"
+      ],
+      "independentVisualReview": "viewed screenshot; no complete independent node and road labels yet"
+    }
+  ]
+}

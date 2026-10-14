@@ -36,7 +36,7 @@ nonisolated struct NodeDraft:Identifiable {var node:MapNode;var id:NodeID {node.
     var apDraft="6"
     private var computationTask:Task<Void,Never>?
     private var corruptWarningCount=0
-    var selectedRoute:RouteRecommendation? {store.session.routes?.recommendations.first{$0.signature==navigation.selectedRouteSignature} ?? store.session.routes?.recommendations.first}
+    var selectedRoute:RouteRecommendation? {store.session.routes?.recommendations.first{$0.signature==navigation.selectedRouteSignature}}
     init() {
         let bundle=(try? CatalogLoader.bundled()) ?? CatalogBundle(rules:RuleCatalog(version:"unavailable",rules:[]),templates:TemplateCatalog(version:"unavailable",templates:[]))
         let items=(try? CatalogLoader.bundledMovements()) ?? MovementCatalog(version:"unavailable",movements:[])
@@ -53,11 +53,11 @@ nonisolated struct NodeDraft:Identifiable {var node:MapNode;var id:NodeID {node.
         if items.movements.isEmpty {error="本地加工品目录载入失败，暂不能规划。"}
     }
     static func demo(rule:String,movement:String) -> MapSession {
-        let kinds:[NodeKind]=[.start,.unknownMystery,.empty,.empty,.battle,.strangeShop,.empty,.empty,.exit]
-        var nodes=kinds.enumerated().map{MapNode(id:$0.offset,row:$0.offset/3,column:$0.offset%3,kind:$0.element)}
-        nodes[4].battleScope = .ordinaryConfirmed
-        var map=FloorMap(rows:3,columns:3,nodes:nodes,edges:[MapEdge(0,1),MapEdge(1,2),MapEdge(2,5),MapEdge(5,8),MapEdge(1,4),MapEdge(4,7),MapEdge(7,8)],start:0)
-        map.exitIDs=[8];map.topologyVerified=true;map.originalCoverage = .complete
+        let kinds:[Int:NodeKind]=[1:.unknownFerocity,2:.unknownFerocity,3:.unknownMystery,4:.exit,5:.start,6:.battle,7:.unknownMystery,8:.strangeShop,11:.empty,12:.unknownFerocity,13:.unknownMystery,14:.exit]
+        var nodes=kinds.keys.sorted().map{MapNode(id:$0,row:$0/5,column:$0%5,kind:kinds[$0]!)}
+        if let i=nodes.firstIndex(where:{$0.id==6}) {nodes[i].battleScope = .ordinaryConfirmed}
+        var map=FloorMap(rows:3,columns:5,nodes:nodes,edges:[MapEdge(1,2),MapEdge(2,3),MapEdge(3,4),MapEdge(2,7),MapEdge(3,8),MapEdge(5,6),MapEdge(6,7),MapEdge(7,8),MapEdge(7,12),MapEdge(8,13),MapEdge(11,12),MapEdge(12,13),MapEdge(13,14)],start:5)
+        map.exitIDs=[4,14];map.topologyVerified=true;map.originalCoverage = .complete
         return MapSession(title:"合成示例 · 非实战存档",map:map,resources:RunResources(actionPoints:6),ruleVersion:rule,movementVersion:movement)
     }
     func apply(_ edit:SessionEdit) {do {try store.apply(edit);persist();recompute()} catch {self.error="修改未提交，请检查节点、次数或最多 8 个必经条件。"}}

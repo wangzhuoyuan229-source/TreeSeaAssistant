@@ -38,3 +38,7 @@
 最终文件完整性、SHA-256、尺寸、原件字节一致性、透明 alpha、SVG 结构及选定版本核验通过，见 [核验报告](../docs/asset-verification.json)。
 
 原始生成文件按字节复制到项目，默认生成目录中的原件保留；旧版本与参考图未覆盖。两个透明 PNG 已检查实际 alpha。首次默认预览一度只呈现 App 图标背景；原尺寸读取和像素复核确认图案完整，未重新生成或替换已选图标。动物元素、iPad 下部装饰已目视检查；最终裁切、可读性和设备资源占用仍须 App 集成后核验。
+
+## 2026-10-14 新版集成
+
+当前封面改用 [黑流图谱 v4](backgrounds/blackstream-atlas-cover-v4.png)，AppIcon 改用 [寻路徽记 v2](branding/wayfinder-icon-v2.png)，均由内置 image_gen 生成并保存原件。地图起点使用 [透明旅人 SVG](branding/start-traveler-v2.svg)，根据路标 StartMarker 的人体矢量转录，替代旧方形节点截图。原版地图背景与节点仍使用来源图集。旧图仅作历史资料保留；本节覆盖上文旧版“尚未集成”的历史状态，当前设备验证见 docs/acceptance/report.md。

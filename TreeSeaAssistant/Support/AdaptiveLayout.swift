@@ -13,5 +13,25 @@ nonisolated public struct RGB: Sendable {
     public func contrast(_ other: RGB) -> Double { (max(luminance,other.luminance)+0.05)/(min(luminance,other.luminance)+0.05) }
 }
 nonisolated public enum ThemeTokens {
-    public static let background=RGB(0x060A08),inkSurface=RGB(0x0B1210),forest=RGB(0x173B31),capsuleRim=RGB(0x79BCAF),ultramarine=RGB(0x3348D6),violet=RGB(0x7146B5),ochre=RGB(0xB99551),burgundy=RGB(0x6B2938),textPrimary=RGB(0xE8E5D9),textSecondary=RGB(0xB7BBAF),warning=RGB(0xE5C177),error=RGB(0xEF9D9D)
+    public static let background=RGB(0x091414),inkSurface=RGB(0x101F1E),forest=RGB(0x1D4540),capsuleRim=RGB(0x9DD2C6),ultramarine=RGB(0x3348D6),violet=RGB(0x7146B5),ochre=RGB(0xB99551),burgundy=RGB(0x6B2938),textPrimary=RGB(0xEEEBDD),textSecondary=RGB(0xBECAC2),warning=RGB(0xE5C177),error=RGB(0xEF9D9D)
+}
+
+/// One scene scale, measured from the supplied 1490 × 894 reference (220px grid).
+nonisolated public struct MapBoardMetrics: Sendable {
+    public let spacing: CGFloat
+    public let size: CGSize
+    public init(rows:Int,columns:Int,width:CGFloat) {
+        spacing=width/(CGFloat(columns)+1.7727272727)
+        size=CGSize(width:width,height:spacing*(CGFloat(rows)+1.0636363636))
+    }
+    public func point(row:Int,column:Int) -> CGPoint {
+        CGPoint(x:spacing*(CGFloat(column)+1.0727272727),y:spacing*(CGFloat(row)+0.8454545455))
+    }
+    public var iconSize:CGFloat {spacing*128/220}
+    public var labelSize:CGFloat {spacing*26/220}
+    public var labelOffset:CGFloat {spacing*64/220}
+    public var roadWidth:CGFloat {spacing*5/220}
+    public static func aspectRatio(rows:Int,columns:Int) -> CGFloat {
+        (CGFloat(columns)+1.7727272727)/(CGFloat(rows)+1.0636363636)
+    }
 }

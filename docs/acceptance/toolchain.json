@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-14",
+  "xcode": "27.0",
+  "xcodeBuild": "27A266a",
+  "iOSSDK": "27.0",
+  "runtime": {
+    "build": "24A434",
+    "deletable": true,
+    "identifier": "262EC976-4B00-4C73-AA20-0CD102A75BD4",
+    "kind": "Disk Image",
+    "mountPath": "/Library/Developer/CoreSimulator/Volumes/iOS_24A434",
+    "path": "/Library/Developer/CoreSimulator/Images/262EC976-4B00-4C73-AA20-0CD102A75BD4.dmg",
+    "platformIdentifier": "com.apple.platform.iphonesimulator",
+    "runtimeBundlePath": "/Library/Developer/CoreSimulator/Volumes/iOS_24A434/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.0.simruntime",
+    "runtimeIdentifier": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+    "signatureState": "Verified",
+    "sizeBytes": 8067000161,
+    "state": "Ready",
+    "supportedArchitectures": [
+      "arm64"
+    ],
+    "version": "27.0"
+  },
+  "officialArchiveVerification": {
+    "source": "https://updates.cdn-apple.com/MobileAssets2026/mobileassets/141-80221/DA856839-9D5F-4A86-BF7A-650A1A74475B/com_apple_MobileAsset_iOSSimulatorRuntime/9130538E-35D6-469D-8D40-B2AC794D7038.aar",
+    "bytes": 8053063680,
+    "sha256": "4dc160434bfb959ceaa86a41407f6a77bddac53bbee7e41f5a8635c8d1f75346",
+    "appleMetadataSHA256Matches": true,
+    "durationSeconds": 1568.8446535839998
+  }
+}
